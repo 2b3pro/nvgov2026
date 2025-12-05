@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compare Nevada Governor candidates Joe Lombardo, Aaron Ford, and Alexis Hill on key issues side-by-side.">
+  <meta name="description" content="Compare all five Nevada Governor 2026 candidates on key issues side-by-side: Lombardo, Hansen, Winterhawk (GOP) and Ford, Hill (Dem).">
   <title>Compare Candidates | Nevada Governor 2026</title>
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
@@ -19,7 +19,8 @@
         <div class="hidden md:flex items-center gap-8">
           <a href="/" class="nav-link">Candidates</a>
           <a href="/compare/" class="nav-link nav-link--active">Compare</a>
-          <a href="/compare/primary.html" class="nav-link">Primary</a>
+          <a href="/compare/gop-primary.html" class="nav-link">GOP Primary</a>
+          <a href="/compare/primary.html" class="nav-link">Dem Primary</a>
           <a href="/about.html" class="nav-link">About</a>
         </div>
       </div>
@@ -41,7 +42,9 @@
 
     <!-- Quick Comparison Cards -->
     <section class="mb-16">
-      <div class="grid md:grid-cols-3 gap-6">
+      <!-- Republican Primary -->
+      <h3 class="text-lg font-bold text-lombardo mb-4">Republican Primary</h3>
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
         <!-- Lombardo -->
         <div class="bg-white rounded-xl shadow-sm border-t-4 border-lombardo p-6">
           <div class="flex items-center gap-4 mb-4">
@@ -67,6 +70,60 @@
           </div>
         </div>
 
+        <!-- Hansen -->
+        <div class="bg-white rounded-xl shadow-sm p-6" style="border-top: 4px solid var(--color-hansen);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl" style="background-color: var(--color-hansen-light);">💼</div>
+            <div>
+              <h3 class="font-bold text-gray-900">Irina Hansen</h3>
+              <p class="text-sm text-gray-500">Republican · Challenger</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Core Identity</span>
+              <span class="font-medium">Outsider</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">2024 Mayoral</span>
+              <span class="font-medium">1.2% (849 votes)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Key Liability</span>
+              <span class="font-medium">No experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Winterhawk -->
+        <div class="bg-white rounded-xl shadow-sm p-6" style="border-top: 4px solid var(--color-winterhawk);">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl" style="background-color: var(--color-winterhawk-light);">🎤</div>
+            <div>
+              <h3 class="font-bold text-gray-900">Matthew Winterhawk</h3>
+              <p class="text-sm text-gray-500">Republican · Challenger</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-gray-600">Core Identity</span>
+              <span class="font-medium">Populist</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Alt. Career</span>
+              <span class="font-medium">Hip-hop artist</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Key Liability</span>
+              <span class="font-medium">Explicit music</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Democratic Primary -->
+      <h3 class="text-lg font-bold text-ford mb-4">Democratic Primary</h3>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl">
         <!-- Ford -->
         <div class="bg-white rounded-xl shadow-sm border-t-4 border-ford p-6">
           <div class="flex items-center gap-4 mb-4">
@@ -493,14 +550,24 @@
 
     </section>
 
-    <!-- Primary Link -->
-    <section class="mt-12 p-8 bg-nevada-navy text-white rounded-xl text-center">
-      <h2 class="text-2xl font-bold mb-4">Don't Forget the Primary</h2>
-      <p class="text-gray-300 mb-6">
-        Before the general election, Ford and Hill face off in the Democratic primary.
-        See how they compare head-to-head.
-      </p>
-      <a href="/compare/primary.html" class="btn btn-gold">Ford vs Hill →</a>
+    <!-- Primary Links -->
+    <section class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="p-8 rounded-xl text-center" style="background: linear-gradient(135deg, var(--color-lombardo-dark), var(--color-lombardo));">
+        <h2 class="text-2xl font-bold mb-4 text-white">GOP Primary</h2>
+        <p class="text-white/80 mb-6 text-sm">
+          Lombardo faces Hansen and Winterhawk from the populist right.
+          Neither is polling significantly—but understand the challengers.
+        </p>
+        <a href="/compare/gop-primary.html" class="btn btn-gold">Lombardo vs Challengers →</a>
+      </div>
+      <div class="p-8 bg-nevada-navy text-white rounded-xl text-center">
+        <h2 class="text-2xl font-bold mb-4">Democratic Primary</h2>
+        <p class="text-gray-300 mb-6 text-sm">
+          Ford and Hill compete for the Democratic nomination.
+          A genuine contest between establishment and reform wings.
+        </p>
+        <a href="/compare/primary.html" class="btn btn-gold">Ford vs Hill →</a>
+      </div>
     </section>
 
   </main>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nonpartisan voter guide for the 2026 Nevada Governor election. Compare candidates Joe Lombardo, Aaron Ford, and Alexis Hill on issues, records, and funding.">
+  <meta name="description" content="Nonpartisan voter guide for the 2026 Nevada Governor election. Compare all five candidates: Lombardo, Ford, Hill, Hansen, and Winterhawk on issues, records, and funding.">
   <title>Nevada Governor 2026 | Know Your Candidates</title>
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
@@ -19,7 +19,8 @@
         <div class="hidden md:flex items-center gap-8">
           <a href="/" class="nav-link nav-link--active">Candidates</a>
           <a href="/compare/" class="nav-link">Compare</a>
-          <a href="/compare/primary.html" class="nav-link">Primary</a>
+          <a href="/compare/gop-primary.html" class="nav-link">GOP Primary</a>
+          <a href="/compare/primary.html" class="nav-link">Dem Primary</a>
           <a href="/about.html" class="nav-link">About</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -46,7 +47,7 @@
       <p class="text-nevada-gold font-semibold uppercase tracking-wider mb-4">2026 Nevada Governor Election</p>
       <h1 class="text-balance mb-6">Know Your Candidates</h1>
       <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-        Nonpartisan, sourced analysis of the three candidates running for Nevada Governor.
+        Nonpartisan, sourced analysis of the five candidates running for Nevada Governor.
         Understand their records, their funding, and their contradictions.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
@@ -61,7 +62,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="text-3xl font-bold font-mono text-nevada-navy">3</p>
+          <p class="text-3xl font-bold font-mono text-nevada-navy">5</p>
           <p class="text-sm text-gray-600">Candidates</p>
         </div>
         <div>
@@ -86,12 +87,18 @@
       <div class="text-center mb-16">
         <h2 class="section-header inline-block text-nevada-navy">The Candidates</h2>
         <p class="text-gray-600 max-w-2xl mx-auto mt-8">
-          One Republican incumbent. Two Democratic challengers. Each with their own strengths,
-          weaknesses, and contradictions voters should understand.
+          Three Republicans vying for the GOP nomination. Two Democrats competing in their primary.
+          Each with their own strengths, weaknesses, and contradictions voters should understand.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- Republican Primary -->
+      <div class="mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <h3 class="text-xl font-bold text-lombardo">Republican Primary</h3>
+          <a href="/compare/gop-primary.html" class="text-sm text-nevada-navy hover:text-nevada-gold">Compare GOP →</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
         <!-- Lombardo Card -->
         <article class="candidate-card candidate-card--lombardo">
           <div class="p-6">
@@ -135,6 +142,101 @@
           </div>
         </article>
 
+        <!-- Hansen Card -->
+        <article class="candidate-card candidate-card--hansen">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl" style="background-color: var(--color-hansen-light);">
+                💼
+              </div>
+              <span class="px-3 py-1 text-sm font-semibold rounded-full" style="background-color: var(--color-hansen-light); color: var(--color-hansen);">
+                Republican
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Irina Hansen</h3>
+            <p class="text-gray-500 text-sm mb-4">Salon Owner / Real Estate Agent</p>
+            <p class="text-gray-600 text-sm mb-6">
+              Romanian immigrant, small business owner. "Judicial Crisis" reformer.<span class="cite"><a href="/sources.html#IH4" class="cite-ref">[22]</a><span class="cite-tooltip">Hansen campaign website</span></span>
+              2024 Las Vegas mayoral candidate (1.2%, 849 votes).<span class="cite"><a href="/sources.html#IH8" class="cite-ref">[23]</a><span class="cite-tooltip">Ballotpedia 2024 results</span></span>
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-hansen);"></span>
+                <span class="text-gray-700">Anti-mandate, anti-regulation platform</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-hansen);"></span>
+                <span class="text-gray-700">Zero institutional endorsements</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-hansen);"></span>
+                <span class="text-gray-700">No prior elected office</span>
+              </div>
+            </div>
+
+            <div class="contradiction-callout text-sm">
+              <strong class="text-amber-800">Key Contradiction:</strong>
+              <span class="text-amber-700">"Successful businesswoman" vs. court records showing alimony claims<span class="cite"><a href="/sources.html#IH5" class="cite-ref">[24]</a><span class="cite-tooltip">FindLaw court opinion</span></span></span>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="/candidates/hansen.html" class="btn btn-secondary w-full">Full Profile</a>
+          </div>
+        </article>
+
+        <!-- Winterhawk Card -->
+        <article class="candidate-card candidate-card--winterhawk">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl" style="background-color: var(--color-winterhawk-light);">
+                🎤
+              </div>
+              <span class="px-3 py-1 text-sm font-semibold rounded-full" style="background-color: var(--color-winterhawk-light); color: var(--color-winterhawk);">
+                Republican
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Matthew Winterhawk</h3>
+            <p class="text-gray-500 text-sm mb-4">SmartSlaps Founder / Author</p>
+            <p class="text-gray-600 text-sm mb-6">
+              "Live N Learn" hip-hop artist and nonprofit founder.<span class="cite"><a href="/sources.html#MW1" class="cite-ref">[25]</a><span class="cite-tooltip">Ballotpedia profile</span></span>
+              Proposes NLSARA (land sovereignty) and state D.O.G.E.<span class="cite"><a href="/sources.html#MW11" class="cite-ref">[26]</a><span class="cite-tooltip">W4Nevada campaign</span></span>
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-winterhawk);"></span>
+                <span class="text-gray-700">Author: "True Freedom" (58 pages)<span class="cite"><a href="/sources.html#MW13" class="cite-ref">[27]</a><span class="cite-tooltip">Bookshop.org</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-winterhawk);"></span>
+                <span class="text-gray-700">Community college (A.A.) education</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full" style="background-color: var(--color-winterhawk);"></span>
+                <span class="text-gray-700">No prior elected office</span>
+              </div>
+            </div>
+
+            <div class="contradiction-callout text-sm">
+              <strong class="text-amber-800">Key Contradiction:</strong>
+              <span class="text-amber-700">"Christian values" but releases explicit hip-hop during campaign<span class="cite"><a href="/sources.html#MW6" class="cite-ref">[28]</a><span class="cite-tooltip">Apple Music "Industry Hoes"</span></span></span>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="/candidates/winterhawk.html" class="btn btn-secondary w-full">Full Profile</a>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <!-- Democratic Primary -->
+      <div class="mb-12">
+        <div class="flex items-center gap-4 mb-6">
+          <h3 class="text-xl font-bold text-ford">Democratic Primary</h3>
+          <a href="/compare/primary.html" class="text-sm text-nevada-navy hover:text-nevada-gold">Compare Dems →</a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
         <!-- Ford Card -->
         <article class="candidate-card candidate-card--ford">
           <div class="p-6">
@@ -220,6 +322,7 @@
             <a href="/candidates/hill.html" class="btn btn-secondary w-full">Full Profile</a>
           </div>
         </article>
+        </div>
       </div>
     </div>
   </section>
@@ -397,15 +500,27 @@
       </div>
 
       <!-- Primary Note -->
-      <div class="mt-12 p-6 border border-nevada-gold/30 rounded-xl">
-        <h3 class="text-nevada-gold font-bold mb-3">Don't Forget the Primary</h3>
-        <p class="text-gray-300 text-sm">
-          Before Ford faces Lombardo, he must first beat Alexis Hill in the Democratic primary.
-          Hill's margin tax proposal and anti-corporate platform could pull Ford left—or split the Democratic vote.
-        </p>
-        <a href="/compare/primary.html" class="inline-block mt-4 text-nevada-gold hover:text-white font-semibold">
-          Compare Ford vs Hill →
-        </a>
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+        <div class="p-6 border border-nevada-gold/30 rounded-xl">
+          <h3 class="text-nevada-gold font-bold mb-3">GOP Primary</h3>
+          <p class="text-gray-300 text-sm">
+            Lombardo faces two challengers: salon owner Irina Hansen and hip-hop artist Matthew Winterhawk.
+            Neither is polling significantly, but they could force Lombardo to defend his right flank.
+          </p>
+          <a href="/compare/gop-primary.html" class="inline-block mt-4 text-nevada-gold hover:text-white font-semibold">
+            Compare GOP Candidates →
+          </a>
+        </div>
+        <div class="p-6 border border-nevada-gold/30 rounded-xl">
+          <h3 class="text-nevada-gold font-bold mb-3">Democratic Primary</h3>
+          <p class="text-gray-300 text-sm">
+            Ford must beat Alexis Hill to face Lombardo in November.
+            Hill's margin tax proposal could pull Ford left—or split the Democratic vote.
+          </p>
+          <a href="/compare/primary.html" class="inline-block mt-4 text-nevada-gold hover:text-white font-semibold">
+            Compare Ford vs Hill →
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -419,7 +534,7 @@
         Explore the full profiles, compare on the issues, and follow the money.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="/compare/" class="btn btn-primary">Compare All Three</a>
+        <a href="/compare/" class="btn btn-primary">Compare All Five</a>
         <a href="/about.html" class="btn btn-secondary">Our Methodology</a>
       </div>
     </div>
@@ -438,15 +553,18 @@
         <div>
           <h4 class="text-white font-bold mb-4">Candidates</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/candidates/lombardo.html" class="hover:text-white">Joe Lombardo</a></li>
-            <li><a href="/candidates/ford.html" class="hover:text-white">Aaron Ford</a></li>
-            <li><a href="/candidates/hill.html" class="hover:text-white">Alexis Hill</a></li>
+            <li><a href="/candidates/lombardo.html" class="hover:text-white">Joe Lombardo (R)</a></li>
+            <li><a href="/candidates/hansen.html" class="hover:text-white">Irina Hansen (R)</a></li>
+            <li><a href="/candidates/winterhawk.html" class="hover:text-white">Matthew Winterhawk (R)</a></li>
+            <li><a href="/candidates/ford.html" class="hover:text-white">Aaron Ford (D)</a></li>
+            <li><a href="/candidates/hill.html" class="hover:text-white">Alexis Hill (D)</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-bold mb-4">Resources</h4>
           <ul class="space-y-2 text-sm">
             <li><a href="/compare/" class="hover:text-white">Issue Comparison</a></li>
+            <li><a href="/compare/gop-primary.html" class="hover:text-white">GOP Primary</a></li>
             <li><a href="/compare/primary.html" class="hover:text-white">Democratic Primary</a></li>
             <li><a href="/sources.html" class="hover:text-white">All Sources</a></li>
             <li><a href="/about.html" class="hover:text-white">Methodology</a></li>
