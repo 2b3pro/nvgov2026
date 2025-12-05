@@ -1,0 +1,495 @@
+@import "tailwindcss";
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Custom theme - Tailwind v4 style */
+@theme {
+  /* Nevada-inspired palette */
+  --color-nevada-navy: #1a365d;
+  --color-nevada-gold: #d69e2e;
+  --color-nevada-sand: #f7f3e9;
+  --color-nevada-sage: #4a5d4a;
+
+  /* Candidate accent colors */
+  --color-lombardo-light: #fef2f2;
+  --color-lombardo: #991b1b;
+  --color-lombardo-dark: #7f1d1d;
+
+  --color-ford-light: #eff6ff;
+  --color-ford: #1e40af;
+  --color-ford-dark: #1e3a8a;
+
+  --color-hill-light: #f0fdfa;
+  --color-hill: #0f766e;
+  --color-hill-dark: #115e59;
+
+  /* Fonts */
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1f2937;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 3rem; line-height: 1; }
+  h2 { font-size: 2.25rem; line-height: 2.5rem; }
+  h3 { font-size: 1.875rem; line-height: 2.25rem; }
+  h4 { font-size: 1.5rem; line-height: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 3.75rem; line-height: 1; }
+}
+
+/* Candidate Cards */
+.candidate-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: all 0.3s;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.25rem);
+}
+
+.candidate-card--lombardo {
+  border-top: 4px solid var(--color-lombardo);
+}
+
+.candidate-card--ford {
+  border-top: 4px solid var(--color-ford);
+}
+
+.candidate-card--hill {
+  border-top: 4px solid var(--color-hill);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-nevada-navy);
+}
+
+.btn-primary {
+  background-color: var(--color-nevada-navy);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--color-nevada-navy);
+  border: 2px solid var(--color-nevada-navy);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-nevada-navy);
+  color: white;
+}
+
+.btn-gold {
+  background-color: var(--color-nevada-gold);
+  color: white;
+}
+
+.btn-gold:hover {
+  opacity: 0.9;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th {
+  background-color: var(--color-nevada-navy);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table tr:hover td {
+  background-color: #f9fafb;
+}
+
+/* Source Links */
+.source-link {
+  font-size: 0.75rem;
+  color: var(--color-nevada-navy);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.source-link:hover {
+  text-decoration-style: solid;
+  color: var(--color-nevada-gold);
+}
+
+/* Contradiction Callout */
+.contradiction-callout {
+  border-left: 4px solid var(--color-nevada-gold);
+  background-color: #fffbeb;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Section Headers */
+.section-header {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--color-nevada-gold);
+}
+
+/* Stats Grid */
+.stat-box {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-box__number {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--color-nevada-navy);
+  font-family: var(--font-mono);
+}
+
+.stat-box__label {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+/* Navigation */
+.nav-link {
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-nevada-navy);
+}
+
+.nav-link--active {
+  color: var(--color-nevada-navy);
+}
+
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-nevada-gold);
+}
+
+/* Money Flow Visualization */
+.money-source {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.money-source:hover {
+  background-color: #f3f4f6;
+}
+
+.money-bar {
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--color-nevada-gold);
+  transition: width 0.5s ease-out;
+}
+
+/* Timeline */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid #e5e7eb;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background-color: var(--color-nevada-navy);
+  border: 4px solid white;
+}
+
+.timeline-item:last-child {
+  border-left: 0;
+}
+
+/* Position indicators */
+.position-for {
+  color: #15803d;
+  background-color: #f0fdf4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.position-against {
+  color: #b91c1c;
+  background-color: #fef2f2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.position-mixed {
+  color: #b45309;
+  background-color: #fffbeb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Evidence weight badges */
+.evidence-strong {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.evidence-mixed {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.evidence-weak {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Text utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Citation System */
+.cite {
+  position: relative;
+  display: inline;
+}
+
+.cite-ref {
+  font-size: 0.65em;
+  vertical-align: super;
+  color: var(--color-nevada-navy);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 1px;
+  cursor: help;
+}
+
+.cite-ref:hover {
+  color: var(--color-nevada-gold);
+}
+
+/* Tooltip for citations */
+.cite-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  max-width: 300px;
+  width: max-content;
+  z-index: 100;
+  transition: opacity 0.2s, visibility 0.2s;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.cite-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2937 transparent transparent transparent;
+}
+
+.cite:hover .cite-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Source list styling */
+.source-list {
+  counter-reset: source-counter;
+}
+
+.source-item {
+  counter-increment: source-counter;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.source-item::before {
+  content: counter(source-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--color-nevada-navy);
+}
+
+.source-item a {
+  color: var(--color-nevada-navy);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  word-break: break-word;
+}
+
+.source-item a:hover {
+  color: var(--color-nevada-gold);
+  text-decoration-style: solid;
+}
+
+/* Animation */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prose styling for body text */
+.prose {
+  max-width: 65ch;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nonpartisan voter guide for the 2026 Nevada Governor election. Compare candidates Joe Lombardo, Aaron Ford, and Alexis Hill on issues, records, and funding.">
+  <title>Nevada Governor 2026 | Know Your Candidates</title>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="bg-nevada-sand">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-2xl">🏜️</span>
+          <span class="font-serif font-bold text-nevada-navy">NV Gov 2026</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/" class="nav-link nav-link--active">Candidates</a>
+          <a href="/compare/" class="nav-link">Compare</a>
+          <a href="/compare/primary.html" class="nav-link">Primary</a>
+          <a href="/about.html" class="nav-link">About</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-4 py-3 space-y-2">
+        <a href="/" class="block py-2 font-medium text-nevada-navy">Candidates</a>
+        <a href="/compare/" class="block py-2 text-gray-700">Compare</a>
+        <a href="/compare/primary.html" class="block py-2 text-gray-700">Primary</a>
+        <a href="/about.html" class="block py-2 text-gray-700">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-nevada-navy text-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-nevada-gold font-semibold uppercase tracking-wider mb-4">2026 Nevada Governor Election</p>
+      <h1 class="text-balance mb-6">Know Your Candidates</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+        Nonpartisan, sourced analysis of the three candidates running for Nevada Governor.
+        Understand their records, their funding, and their contradictions.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#candidates" class="btn btn-gold">Meet the Candidates</a>
+        <a href="/compare/" class="btn bg-white/10 text-white hover:bg-white/20">Compare on Issues</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Stats Bar -->
+  <section class="bg-white py-8 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-bold font-mono text-nevada-navy">3</p>
+          <p class="text-sm text-gray-600">Candidates</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-mono text-nevada-navy">11</p>
+          <p class="text-sm text-gray-600">Issue Areas</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-mono text-nevada-navy">162</p>
+          <p class="text-sm text-gray-600">Lombardo Vetoes<span class="cite"><a href="/sources.html#L1" class="cite-ref">[1]</a><span class="cite-tooltip">The Nevada Independent, 2025 Veto Tracker</span></span></p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-mono text-nevada-navy">$1.1B</p>
+          <p class="text-sm text-gray-600">Ford Opioid Settlements<span class="cite"><a href="/sources.html#F7" class="cite-ref">[2]</a><span class="cite-tooltip">Eglet Law, Walgreens Settlement Announcement</span></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Candidates Section -->
+  <section id="candidates" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-header inline-block text-nevada-navy">The Candidates</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-8">
+          One Republican incumbent. Two Democratic challengers. Each with their own strengths,
+          weaknesses, and contradictions voters should understand.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Lombardo Card -->
+        <article class="candidate-card candidate-card--lombardo">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-20 h-20 rounded-full bg-lombardo-light flex items-center justify-center text-3xl">
+                👨‍✈️
+              </div>
+              <span class="px-3 py-1 bg-lombardo-light text-lombardo text-sm font-semibold rounded-full">
+                Republican
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Joe Lombardo</h3>
+            <p class="text-gray-500 text-sm mb-4">Governor (Incumbent)</p>
+            <p class="text-gray-600 text-sm mb-6">
+              Former Sheriff turned "Veto Governor." 162 vetoes across two sessions.<span class="cite"><a href="/sources.html#L1" class="cite-ref">[1]</a><span class="cite-tooltip">The Nevada Independent, 2025 Veto Tracker</span></span>
+              Deep ties to hotel magnate Robert Bigelow ($25M+ donations).<span class="cite"><a href="/sources.html#L3" class="cite-ref">[3]</a><span class="cite-tooltip">AP News, "Hotel mogul, UFO believer spending in Nevada governor's race"</span></span>
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-lombardo"></span>
+                <span class="text-gray-700">26 years LVMPD, Sheriff 2015-2022<span class="cite"><a href="/sources.html#L2" class="cite-ref">[17]</a><span class="cite-tooltip">LVMPD records, official biography</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-lombardo"></span>
+                <span class="text-gray-700">$380M A's stadium, $330M Tesla deal<span class="cite"><a href="/sources.html#L11" class="cite-ref">[18]</a><span class="cite-tooltip">Nevada Legislature, SB1 (A's Stadium) and Nevada GOED records</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-lombardo"></span>
+                <span class="text-gray-700">"Badge Gate" ethics violation settled<span class="cite"><a href="/sources.html#L15" class="cite-ref">[19]</a><span class="cite-tooltip">Nevada Independent, Ethics Commission investigation</span></span></span>
+              </div>
+            </div>
+
+            <div class="contradiction-callout text-sm">
+              <strong class="text-amber-800">Key Contradiction:</strong>
+              <span class="text-amber-700">Claims "free market" but approved $710M+ in corporate subsidies<span class="cite"><a href="/sources.html#L11" class="cite-ref">[20]</a><span class="cite-tooltip">Combined Tesla, A's stadium, and other subsidy packages</span></span></span>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="/candidates/lombardo.html" class="btn btn-secondary w-full">Full Profile</a>
+          </div>
+        </article>
+
+        <!-- Ford Card -->
+        <article class="candidate-card candidate-card--ford">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-20 h-20 rounded-full bg-ford-light flex items-center justify-center text-3xl">
+                ⚖️
+              </div>
+              <span class="px-3 py-1 bg-ford-light text-ford text-sm font-semibold rounded-full">
+                Democrat
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Aaron Ford</h3>
+            <p class="text-gray-500 text-sm mb-4">Attorney General</p>
+            <p class="text-gray-600 text-sm mb-6">
+              "From food stamps to five degrees."<span class="cite"><a href="/sources.html#F1" class="cite-ref">[4]</a><span class="cite-tooltip">Aaron Ford personal background, multiple sources</span></span> $1.1B in opioid settlements.<span class="cite"><a href="/sources.html#F7" class="cite-ref">[5]</a><span class="cite-tooltip">Eglet Law, Walgreens Settlement Announcement</span></span>
+              Deep ties to trial lawyers through Citizens for Justice PAC.<span class="cite"><a href="/sources.html#F12" class="cite-ref">[6]</a><span class="cite-tooltip">OpenSecrets, Citizens for Justice PAC filings</span></span>
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-ford"></span>
+                <span class="text-gray-700">Former Senate Majority Leader<span class="cite"><a href="/sources.html#F2" class="cite-ref">[7]</a><span class="cite-tooltip">Nevada Legislature records</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-ford"></span>
+                <span class="text-gray-700">AB 236 criminal justice reform architect<span class="cite"><a href="/sources.html#F8" class="cite-ref">[8]</a><span class="cite-tooltip">Nevada Legislature, AB 236 (2019)</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-ford"></span>
+                <span class="text-gray-700">$185K IRS liens (2010-2014, resolved)<span class="cite"><a href="/sources.html#F14" class="cite-ref">[9]</a><span class="cite-tooltip">Washington Free Beacon, IRS lien investigation</span></span></span>
+              </div>
+            </div>
+
+            <div class="contradiction-callout text-sm">
+              <strong class="text-amber-800">Key Contradiction:</strong>
+              <span class="text-amber-700">"Champion of little guy" but donor firms get $165M+ in state legal fees<span class="cite"><a href="/sources.html#F12" class="cite-ref">[10]</a><span class="cite-tooltip">Nevada Controller, outside counsel payments</span></span></span>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="/candidates/ford.html" class="btn btn-secondary w-full">Full Profile</a>
+          </div>
+        </article>
+
+        <!-- Hill Card -->
+        <article class="candidate-card candidate-card--hill">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-20 h-20 rounded-full bg-hill-light flex items-center justify-center text-3xl">
+                📋
+              </div>
+              <span class="px-3 py-1 bg-hill-light text-hill text-sm font-semibold rounded-full">
+                Democrat
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Alexis Hill</h3>
+            <p class="text-gray-500 text-sm mb-4">Washoe County Commission Chair</p>
+            <p class="text-gray-600 text-sm mb-6">
+              Technocratic progressive from Reno. Proposes margin tax.<span class="cite"><a href="/sources.html#H5" class="cite-ref">[11]</a><span class="cite-tooltip">Hill campaign platform, margin tax proposal</span></span>
+              Election certifier who fought Beadles' far-right movement.<span class="cite"><a href="/sources.html#H3" class="cite-ref">[12]</a><span class="cite-tooltip">Nevada Independent, "2024 Election Certification Showdown"</span></span>
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-hill"></span>
+                <span class="text-gray-700">City planner background, MPA from UNR<span class="cite"><a href="/sources.html#H1" class="cite-ref">[13]</a><span class="cite-tooltip">Alexis Hill official biography</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-hill"></span>
+                <span class="text-gray-700">"No subsidies for billionaires" platform<span class="cite"><a href="/sources.html#H5" class="cite-ref">[14]</a><span class="cite-tooltip">Hill campaign announcements</span></span></span>
+              </div>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="w-2 h-2 rounded-full bg-hill"></span>
+                <span class="text-gray-700">Voted FOR homeless camping ban<span class="cite"><a href="/sources.html#H9" class="cite-ref">[15]</a><span class="cite-tooltip">Washoe County Commission voting records</span></span></span>
+              </div>
+            </div>
+
+            <div class="contradiction-callout text-sm">
+              <strong class="text-amber-800">Key Contradiction:</strong>
+              <span class="text-amber-700">"Anti-corporate" but takes developer money, votes for their projects<span class="cite"><a href="/sources.html#H11" class="cite-ref">[16]</a><span class="cite-tooltip">Washoe County Commission records, campaign finance reports</span></span></span>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="/candidates/hill.html" class="btn btn-secondary w-full">Full Profile</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Issues Overview -->
+  <section class="bg-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-header inline-block text-nevada-navy">The Issues</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-8">
+          Eleven policy domains that matter most to Nevada. Click any issue to see
+          where each candidate stands—and where they contradict themselves.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/compare/issues/housing.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🏠</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Housing & Rent</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Eviction protections, rent control, corporate landlords
+          </p>
+        </a>
+
+        <a href="/compare/issues/economy.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">💼</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Economy & Jobs</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Unemployment, corporate subsidies, diversification
+          </p>
+        </a>
+
+        <a href="/compare/issues/crime.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🚔</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Crime & Safety</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            AB 236, policing, Resort Corridor Court
+          </p>
+        </a>
+
+        <a href="/compare/issues/education.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">📚</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Education</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            School funding, charter schools, teacher pay
+          </p>
+        </a>
+
+        <a href="/compare/issues/healthcare.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🏥</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Healthcare</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Opioid crisis, rural access, gender-affirming care
+          </p>
+        </a>
+
+        <a href="/compare/issues/taxes.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">💰</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Taxes & Revenue</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            No income tax, margin tax debate, corporate breaks
+          </p>
+        </a>
+
+        <a href="/compare/issues/immigration.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🌎</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Immigration</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Sanctuary policies, federal cooperation, workforce
+          </p>
+        </a>
+
+        <a href="/compare/issues/guns.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🔫</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Gun Policy</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Background checks, age limits, polling place rules
+          </p>
+        </a>
+
+        <a href="/compare/issues/environment.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🌊</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Water & Environment</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Colorado River, Lake Mead, lithium mining
+          </p>
+        </a>
+
+        <a href="/compare/issues/transparency.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">🔍</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Transparency & Ethics</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Dark money, open records, ethics violations
+          </p>
+        </a>
+
+        <a href="/compare/issues/abortion.html" class="group p-6 rounded-xl bg-gray-50 hover:bg-nevada-navy transition-colors">
+          <span class="text-3xl mb-3 block">⚕️</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-white mb-2">Reproductive Rights</h4>
+          <p class="text-sm text-gray-600 group-hover:text-gray-300">
+            Abortion protections, shield laws, access
+          </p>
+        </a>
+
+        <a href="/compare/" class="group p-6 rounded-xl border-2 border-dashed border-gray-300 hover:border-nevada-navy transition-colors flex flex-col items-center justify-center">
+          <span class="text-3xl mb-3">⚖️</span>
+          <h4 class="font-bold text-gray-900 group-hover:text-nevada-navy">Full Comparison</h4>
+          <p class="text-sm text-gray-500">All issues, side by side</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Race Section -->
+  <section class="py-16 md:py-24 bg-nevada-navy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-header inline-block text-white">The Race</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mt-8">
+          Current polling shows a dead heat. Here's what the numbers tell us about the path forward.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Polling -->
+        <div>
+          <h3 class="text-xl font-bold text-nevada-gold mb-6">General Election Polling</h3>
+          <div class="bg-white/10 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-gray-300">Lombardo (R)</span>
+              <span class="font-mono font-bold text-xl">41%</span>
+            </div>
+            <div class="w-full bg-white/20 rounded-full h-3 mb-6">
+              <div class="bg-lombardo h-3 rounded-full" style="width: 50%"></div>
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-gray-300">Ford (D)</span>
+              <span class="font-mono font-bold text-xl">41%</span>
+            </div>
+            <div class="w-full bg-white/20 rounded-full h-3 mb-6">
+              <div class="bg-ford h-3 rounded-full" style="width: 50%"></div>
+            </div>
+
+            <p class="text-xs text-gray-400 mt-4">
+              Source: Emerson College Poll, November 2024. 18-23% undecided.<span class="cite"><a href="/sources.html#G1" class="cite-ref">[21]</a><span class="cite-tooltip">Emerson College, "Nevada 2024: Presidential and Senate Races Tight"</span></span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Battlegrounds -->
+        <div>
+          <h3 class="text-xl font-bold text-nevada-gold mb-6">Key Battlegrounds</h3>
+          <div class="space-y-4">
+            <div class="bg-white/10 rounded-xl p-4">
+              <h4 class="font-semibold mb-2">Washoe County (Reno)</h4>
+              <p class="text-sm text-gray-300">
+                Swing county. Lombardo must flip it; Ford must hold it. Hill's home turf.
+              </p>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <h4 class="font-semibold mb-2">Clark County Suburbs</h4>
+              <p class="text-sm text-gray-300">
+                Henderson, Summerlin. Educated moderates who will decide the election.
+              </p>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <h4 class="font-semibold mb-2">The "Cow Counties"</h4>
+              <p class="text-sm text-gray-300">
+                Rural Nevada. Lombardo needs 70%+ margins to offset Clark turnout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Note -->
+      <div class="mt-12 p-6 border border-nevada-gold/30 rounded-xl">
+        <h3 class="text-nevada-gold font-bold mb-3">Don't Forget the Primary</h3>
+        <p class="text-gray-300 text-sm">
+          Before Ford faces Lombardo, he must first beat Alexis Hill in the Democratic primary.
+          Hill's margin tax proposal and anti-corporate platform could pull Ford left—or split the Democratic vote.
+        </p>
+        <a href="/compare/primary.html" class="inline-block mt-4 text-nevada-gold hover:text-white font-semibold">
+          Compare Ford vs Hill →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-nevada-navy mb-6">Make an Informed Decision</h2>
+      <p class="text-gray-600 text-lg mb-8">
+        Democracy works best when voters understand who they're voting for—including the contradictions.
+        Explore the full profiles, compare on the issues, and follow the money.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/compare/" class="btn btn-primary">Compare All Three</a>
+        <a href="/about.html" class="btn btn-secondary">Our Methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-white font-bold mb-4">NV Gov 2026</h4>
+          <p class="text-sm">
+            A nonpartisan voter information project. Not affiliated with any campaign or party.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Candidates</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/candidates/lombardo.html" class="hover:text-white">Joe Lombardo</a></li>
+            <li><a href="/candidates/ford.html" class="hover:text-white">Aaron Ford</a></li>
+            <li><a href="/candidates/hill.html" class="hover:text-white">Alexis Hill</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Resources</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/compare/" class="hover:text-white">Issue Comparison</a></li>
+            <li><a href="/compare/primary.html" class="hover:text-white">Democratic Primary</a></li>
+            <li><a href="/sources.html" class="hover:text-white">All Sources</a></li>
+            <li><a href="/about.html" class="hover:text-white">Methodology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">Transparency</h4>
+          <p class="text-sm">
+            All claims are sourced. We have no donors or sponsors.
+            <a href="/sources.html" class="text-nevada-gold hover:underline">View all sources</a>.
+          </p>
+        </div>
+      </div>
+      <!-- Disclaimer -->
+      <div class="border-t border-gray-800 mt-8 pt-8">
+        <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
+          <p class="text-xs text-gray-400 leading-relaxed">
+            <strong class="text-gray-300">Disclaimer:</strong> This site was created with AI assistance. While we have made every effort to verify claims against primary sources, errors may exist. All factual claims include citations; hover over superscript numbers to see sources, or visit our <a href="/sources.html" class="text-nevada-gold hover:underline">sources page</a> for complete documentation including PDF dossiers. We encourage voters to verify information independently. If you find an error, please <a href="/about.html#corrections" class="text-nevada-gold hover:underline">contact us</a>.
+          </p>
+        </div>
+        <p class="text-sm text-center">© 2025 NV Gov 2026. Built for Nevada voters.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
