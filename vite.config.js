@@ -18,6 +18,7 @@ export default defineConfig({
         compare_dem: resolve(__dirname, 'compare/primary.html'),
         about: resolve(__dirname, 'about.html'),
         sources: resolve(__dirname, 'sources.html'),
+        updates: resolve(__dirname, 'updates.html'),
         // Issue Pages
         issues_index: resolve(__dirname, 'compare/issues/index.html'),
         issues_housing: resolve(__dirname, 'compare/issues/housing.html'),
