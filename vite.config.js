@@ -31,6 +31,7 @@ export default defineConfig({
         issues_environment: resolve(__dirname, 'compare/issues/environment.html'),
         issues_transparency: resolve(__dirname, 'compare/issues/transparency.html'),
         issues_abortion: resolve(__dirname, 'compare/issues/abortion.html'),
+        issues_labor: resolve(__dirname, 'compare/issues/labor.html'),
       },
     },
   },
