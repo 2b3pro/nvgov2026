@@ -20,7 +20,6 @@ export default defineConfig({
         sources: resolve(__dirname, 'sources.html'),
         updates: resolve(__dirname, 'updates.html'),
         // Issue Pages
-        issues_index: resolve(__dirname, 'compare/issues/index.html'),
         issues_housing: resolve(__dirname, 'compare/issues/housing.html'),
         issues_economy: resolve(__dirname, 'compare/issues/economy.html'),
         issues_crime: resolve(__dirname, 'compare/issues/crime.html'),
