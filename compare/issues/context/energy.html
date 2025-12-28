@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevada's Energy System | Understanding NV Energy, Regulation & Reform</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nevada-navy: #1a365d;
+            --nevada-gold: #d69e2e;
+            --nevada-sand: #f7f3e9;
+            --soft-white: #FAFAF8;
+            --warm-gray: #6B6B6B;
+            --midnight: #0D1B2A;
+            --sunset-coral: #E07A5F;
+            --canyon-red: #C44536;
+            --silver-sage: #4a5d4a;
+            --accent-green: #15803d;
+            --accent-red: #b91c1c;
+            --accent-orange: #b45309;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--soft-white);
+            color: var(--midnight);
+            line-height: 1.7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--nevada-navy) 0%, var(--midnight) 100%);
+            color: white;
+            padding: 60px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--nevada-gold);
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .hero-stat-source {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-top: 6px;
+        }
+
+        .hero-stat-source a {
+            color: var(--nevada-gold);
+            text-decoration: none;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .section:first-of-type {
+            border-top: none;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sunset-coral);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: var(--nevada-navy);
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            color: var(--warm-gray);
+            max-width: 700px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .card-accent-gold {
+            border-left: 4px solid var(--nevada-gold);
+        }
+
+        .card-accent-coral {
+            border-left: 4px solid var(--sunset-coral);
+        }
+
+        .card-accent-green {
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--nevada-navy);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .card-icon.gold { background: rgba(214, 158, 46, 0.15); }
+        .card-icon.blue { background: rgba(26, 54, 93, 0.1); }
+        .card-icon.green { background: rgba(21, 128, 61, 0.1); }
+        .card-icon.coral { background: rgba(224, 122, 95, 0.15); }
+        .card-icon.orange { background: rgba(180, 83, 9, 0.1); }
+
+        .card p {
+            color: var(--warm-gray);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .card-highlight {
+            background: rgba(214, 158, 46, 0.1);
+            border-left: 3px solid var(--nevada-gold);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.9rem;
+            color: var(--midnight);
+        }
+
+        .card-highlight.tension {
+            background: rgba(181, 28, 28, 0.08);
+            border-left-color: var(--accent-red);
+        }
+
+        .card-highlight.opportunity {
+            background: rgba(21, 128, 61, 0.08);
+            border-left-color: var(--accent-green);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            color: var(--warm-gray);
+            background: #f3f4f6;
+            padding: 4px 10px;
+            border-radius: 10px;
+            margin-left: auto;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        /* Flow Diagram */
+        .flow-diagram {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .flow-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--nevada-navy);
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .flow-step-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #f7f3e9;
+            border: 2px solid var(--nevada-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 12px;
+        }
+
+        .flow-step-label {
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--nevada-navy);
+        }
+
+        .flow-step-desc {
+            font-size: 0.8rem;
+            color: var(--warm-gray);
+        }
+
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: var(--nevada-gold);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 32px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--nevada-gold);
+            border: 3px solid var(--soft-white);
+        }
+
+        .timeline-year {
+            font-size: 0.85rem;
+            color: var(--nevada-gold);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--nevada-navy);
+        }
+
+        .timeline-desc {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .chart-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--nevada-navy);
+        }
+
+        .chart-caption {
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+            margin-bottom: 20px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 280px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .comparison-table th {
+            background: var(--nevada-navy);
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table td {
+            color: var(--warm-gray);
+        }
+
+        .comparison-table tr:hover td {
+            background: #f9fafb;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pro { color: var(--accent-green); }
+        .con { color: var(--accent-red); }
+        .neutral { color: var(--accent-orange); }
+
+        /* Callout Boxes */
+        .callout {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin: 24px 0;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .callout.warning {
+            border-left: 4px solid var(--accent-orange);
+            background: #fffbeb;
+        }
+
+        .callout.insight {
+            border-left: 4px solid var(--nevada-navy);
+            background: rgba(26, 54, 93, 0.05);
+        }
+
+        .callout-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--nevada-navy);
+        }
+
+        .callout p {
+            color: var(--warm-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Issues Grid */
+        .issues-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+        }
+
+        .issue-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .issue-card:hover {
+            border-color: var(--nevada-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .issue-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .issue-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: var(--nevada-navy);
+        }
+
+        .issue-desc {
+            font-size: 0.8rem;
+            color: var(--warm-gray);
+        }
+
+        /* Takeaways */
+        .takeaways {
+            background: linear-gradient(135deg, rgba(214, 158, 46, 0.1) 0%, rgba(247, 243, 233, 0.8) 100%);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 40px;
+        }
+
+        .takeaways h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: var(--nevada-navy);
+        }
+
+        .takeaways-list {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .takeaways-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .takeaway-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--nevada-gold) 0%, #c9922a 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .takeaways-list li div {
+            color: var(--midnight);
+        }
+
+        .takeaways-list li strong {
+            color: var(--nevada-navy);
+        }
+
+        /* Watch List */
+        .watch-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .watch-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            transition: all 0.2s;
+        }
+
+        .watch-item:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .watch-icon {
+            font-size: 1.5rem;
+        }
+
+        .watch-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--nevada-navy);
+        }
+
+        .watch-desc {
+            font-size: 0.9rem;
+            color: var(--warm-gray);
+        }
+
+        /* Sources Section */
+        .sources-section {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 40px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        .sources-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--nevada-navy);
+        }
+
+        .sources-list {
+            display: grid;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--warm-gray);
+        }
+
+        .sources-list a {
+            color: var(--nevada-navy);
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        .sources-list a:hover {
+            color: var(--nevada-gold);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 48px 24px;
+            margin-top: 60px;
+            background: white;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-brand .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--nevada-navy);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .footer-link-group h4 {
+            font-size: 0.85rem;
+            color: var(--nevada-navy);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .footer-link-group ul {
+            list-style: none;
+        }
+
+        .footer-link-group li {
+            margin-bottom: 8px;
+        }
+
+        .footer-link-group a {
+            color: var(--warm-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-link-group a:hover {
+            color: var(--nevada-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 8px;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--nevada-gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 40px 20px; }
+            .hero h1 { font-size: 2rem; }
+            .section { padding: 40px 0; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+            .takeaways { padding: 32px 20px; }
+            .comparison-table { font-size: 0.85rem; }
+            .comparison-table th, .comparison-table td { padding: 12px 10px; }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Anchor offset */
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <a href="/compare/issues/environment.html" class="back-link">← Back to Energy & Environment</a>
+        <span class="hero-badge">Systems Analysis</span>
+        <h1>Understanding Nevada's Energy System</h1>
+        <p class="hero-subtitle">
+            How NV Energy works, who holds the power, where the conflicts lie—and what reforms could change the game for Nevada's 3+ million ratepayers.
+        </p>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">~90%</div>
+                <div class="hero-stat-label">of Nevada's load served by NV Energy</div>
+                <div class="hero-stat-source"><a href="#sources">[1]</a></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">9-10%</div>
+                <div class="hero-stat-label">Authorized return on investment</div>
+                <div class="hero-stat-source"><a href="#sources">[2]</a></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">50%</div>
+                <div class="hero-stat-label">Renewable goal by 2030</div>
+                <div class="hero-stat-source"><a href="#sources">[3]</a></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">$2B+</div>
+                <div class="hero-stat-label">Greenlink transmission investment</div>
+                <div class="hero-stat-source"><a href="#sources">[4]</a></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">~70%</div>
+                <div class="hero-stat-label">Fuel cost increase in 2022</div>
+                <div class="hero-stat-source"><a href="#sources">[5]</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- How It Works -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-number">Section 01</div>
+            <h2 class="section-title">How Nevada's Electricity System Works</h2>
+            <p class="section-intro">A regulated monopoly model where rates are set by regulators, not markets—with unique twists.</p>
+        </div>
+
+        <div class="flow-diagram">
+            <div class="flow-title">The Flow of Power & Money</div>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="flow-step-icon">🏭</div>
+                    <div class="flow-step-label">NV Energy</div>
+                    <div class="flow-step-desc">Generates & delivers power</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-icon">⚖️</div>
+                    <div class="flow-step-label">PUCN</div>
+                    <div class="flow-step-desc">Sets "just & reasonable" rates</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-icon">🏠</div>
+                    <div class="flow-step-label">Customers</div>
+                    <div class="flow-step-desc">Pay regulated rates</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                    <div class="flow-step-icon">💵</div>
+                    <div class="flow-step-label">Shareholders</div>
+                    <div class="flow-step-desc">Receive guaranteed return</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon gold">🔒</div>
+                    Regulated Monopoly Model
+                </div>
+                <p>NV Energy (owned by Berkshire Hathaway) is a vertically integrated utility—they generate, transmit, and distribute power with no retail competition.</p>
+                <div class="card-highlight">
+                    Unlike deregulated markets, electric rates are set by PUCN regulators, not market forces. NV Energy gets a guaranteed ~9-10% return on investments.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon blue">⛽</div>
+                    Fuel Cost Pass-Through
+                </div>
+                <p>Fuel and purchased power costs flow directly to customers through quarterly adjustments—NV Energy makes no profit on fuel.</p>
+                <div class="card-highlight tension">
+                    <strong>Key Risk:</strong> Customers bear 100% of fuel price volatility. When gas costs jumped ~70% in 2022, bills spiked ~$15/month for typical households.
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon green">🚪</div>
+                    Large Customer Exit Option
+                </div>
+                <p>Under NRS 704B, large customers (1+ MW) can leave NV Energy's bundled service—if they pay hefty exit fees.</p>
+                <div class="card-highlight">
+                    MGM paid <strong>~$87 million</strong> to exit, seeking cheaper/greener power. Several casinos have used or considered this option.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Players -->
+    <section class="section" id="actors">
+        <div class="section-header">
+            <div class="section-number">Section 02</div>
+            <h2 class="section-title">The Key Players & Their Incentives</h2>
+            <p class="section-intro">Understanding who wants what reveals why conflicts emerge and persist.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon gold">🏛️</div>
+                    NV Energy
+                    <span class="card-tag">Utility</span>
+                </div>
+                <p><strong>Goal:</strong> Maximize return by expanding "rate base" (power plants, transmission, grid investments). The model incentivizes capital spending.</p>
+                <div class="card-highlight tension">
+                    <strong>Tension:</strong> Customer-owned solar erodes sales and revenue. NV Energy has lobbied to limit net metering credits and increase fixed charges.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon blue">⚖️</div>
+                    PUCN
+                    <span class="card-tag">Regulator</span>
+                </div>
+                <p><strong>Goal:</strong> Balance "just and reasonable" rates for consumers with allowing NV Energy a fair return to attract capital.</p>
+                <div class="card-highlight">
+                    Three commissioners appointed by the Governor. They respond to evidence from intervenors, including the Bureau of Consumer Protection.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon green">🏠</div>
+                    Residential Customers
+                    <span class="card-tag">Ratepayers</span>
+                </div>
+                <p><strong>Goal:</strong> Affordable, reliable electricity. Most engage only when bills surge or service fails.</p>
+                <div class="card-highlight tension">
+                    <strong>Split incentives:</strong> Solar homeowners want strong credits; non-solar neighbors worry about potential cost shifts.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon orange">☀️</div>
+                    Rooftop Solar Industry
+                    <span class="card-tag">Installers</span>
+                </div>
+                <p><strong>Goal:</strong> Maximize solar adoption through favorable net metering, low fixed charges, and stable policies.</p>
+                <div class="card-highlight opportunity">
+                    After the 2015 rollback nearly killed the market, AB 405 (2017) revived it—applications jumped <strong>11-fold</strong> in one year.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon coral">🎰</div>
+                    Large Commercial Users
+                    <span class="card-tag">Casinos, Tech</span>
+                </div>
+                <p><strong>Goal:</strong> Lower, predictable energy costs—often paired with greener power to meet sustainability goals.</p>
+                <div class="card-highlight">
+                    These customers create competitive pressure on NV Energy. Their departures can shift costs to remaining ratepayers.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <div class="card-icon blue">🏛️</div>
+                    Legislature & Governor
+                    <span class="card-tag">Policy</span>
+                </div>
+                <p><strong>Goal:</strong> Respond to voter concerns on bills, jobs, and climate goals while maintaining utility stability.</p>
+                <div class="card-highlight opportunity">
+                    Recent laws (SB 300, SB 358, SB 448) raised RPS to 50%, set 80% carbon reduction by 2030, and mandated pursuing RTO membership by 2030.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conflicts -->
+    <section class="section" id="conflicts">
+        <div class="section-header">
+            <div class="section-number">Section 03</div>
+            <h2 class="section-title">Core Conflicts & Tensions</h2>
+            <p class="section-intro">The structural fault lines that shape policy battles.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card card-accent-coral">
+                <div class="card-title">
+                    <div class="card-icon coral">🔋</div>
+                    Utility vs. Distributed Solar
+                </div>
+                <p>Every kW on a rooftop is a kW NV Energy doesn't build and profit from. The utility's business model conflicts with customer-owned generation.</p>
+                <div class="card-highlight tension">
+                    <strong>2015 Crisis:</strong> PUCN slashed net metering payments. Public outcry led to 2017's AB 405 restoring credits at 75% of retail—a compromise both sides accepted.
+                </div>
+            </div>
+
+            <div class="card card-accent-gold">
+                <div class="card-title">
+                    <div class="card-icon gold">⚖️</div>
+                    Who Pays for the Grid?
+                </div>
+                <p>As more customers generate their own power, fixed grid costs must be covered by fewer sales. This raises equity questions.</p>
+                <div class="card-highlight">
+                    <strong>Key finding:</strong> Independent PUCN analysis found the cost impact of net metering has been negligible or even slightly positive for other ratepayers.
+                </div>
+            </div>
+
+            <div class="card card-accent-coral">
+                <div class="card-title">
+                    <div class="card-icon coral">💸</div>
+                    Fuel Cost Risk
+                </div>
+                <p>NV Energy has no financial stake in fuel costs—they pass through at cost. Shareholders are insulated; customers absorb all volatility.</p>
+                <div class="card-highlight tension">
+                    <strong>Reform proposed:</strong> AB 452 would study fuel cost sharing—giving NV Energy "skin in the game" to minimize fuel expenses.
+                </div>
+            </div>
+
+            <div class="card card-accent-green">
+                <div class="card-title">
+                    <div class="card-icon green">🏚️</div>
+                    Low-Income Energy Burden
+                </div>
+                <p>Low-income customers without solar have no alternatives to absorb fuel surcharges. Energy costs consume a larger share of their income.</p>
+                <div class="card-highlight opportunity">
+                    <strong>Potential:</strong> Expanded efficiency programs, PIPP (percentage-of-income payment plans), and subsidized community solar subscriptions.
+                </div>
+            </div>
+        </div>
+
+        <div class="callout warning">
+            <div class="callout-title">⚠️ The Central Question</div>
+            <p>How can Nevada meet climate and reliability goals without burdening those least able to afford it? The answer will shape policy debates for years.</p>
+        </div>
+    </section>
+
+    <!-- Reform Timeline -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-number">Section 04</div>
+            <h2 class="section-title">Reform Timeline</h2>
+            <p class="section-intro">Key legislative and regulatory milestones shaping Nevada's energy future.</p>
+        </div>
+
+        <div class="cards-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-title">Net Metering Rollback</div>
+                        <div class="timeline-desc">PUCN slashes solar credits, devastating rooftop solar market. Major installers exit Nevada.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-title">AB 405 "Solar Bill of Rights"</div>
+                        <div class="timeline-desc">Legislature restores net metering at 75% of retail rate. Applications jump 11-fold.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-title">Question 3 Defeated</div>
+                        <div class="timeline-desc">Voters reject energy deregulation 67-33% after $63M opposition campaign by Berkshire/NV Energy.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-title">SB 358 - RPS Increase</div>
+                        <div class="timeline-desc">Raises Renewable Portfolio Standard to 50% by 2030. Unanimous Senate support.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-title">SB 300 - Performance Ratemaking</div>
+                        <div class="timeline-desc">Authorizes alternative ratemaking to better align utility profits with policy goals.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-title">SB 448 - Landmark Clean Energy</div>
+                        <div class="timeline-desc">Sets 80% carbon reduction by 2030, accelerates Greenlink, mandates RTO membership pursuit by 2030.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-title">Fuel Cost Sharing Debate</div>
+                        <div class="timeline-desc">AB 452 proposed to study mechanisms giving NV Energy stake in fuel cost management.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025+</div>
+                        <div class="timeline-title">Ongoing</div>
+                        <div class="timeline-desc">Greenlink construction, RTO membership pursuit, performance-based ratemaking implementation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reform Options -->
+    <section class="section" id="reforms">
+        <div class="section-header">
+            <div class="section-number">Section 05</div>
+            <h2 class="section-title">Reform Options on the Table</h2>
+            <p class="section-intro">Realistic paths to better align incentives with public interest.</p>
+        </div>
+
+        <div class="issues-grid">
+            <div class="issue-card">
+                <div class="issue-icon">🔄</div>
+                <div class="issue-title">Revenue Decoupling</div>
+                <div class="issue-desc">Break link between sales & profits</div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">🎯</div>
+                <div class="issue-title">Performance-Based Rates</div>
+                <div class="issue-desc">Tie profits to outcomes, not capital</div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">⛽</div>
+                <div class="issue-title">Fuel Cost Sharing</div>
+                <div class="issue-desc">Give utility stake in fuel costs</div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">☀️</div>
+                <div class="issue-title">Community Solar</div>
+                <div class="issue-desc">Expand access to renters & low-income</div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">⏰</div>
+                <div class="issue-title">Time-of-Use Rates</div>
+                <div class="issue-desc">Price signals to shift demand</div>
+            </div>
+            <div class="issue-card">
+                <div class="issue-icon">🛡️</div>
+                <div class="issue-title">Low-Income Protections</div>
+                <div class="issue-desc">PIPP, efficiency, subsidies</div>
+            </div>
+        </div>
+
+        <div style="overflow-x: auto; margin-top: 40px;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Reform</th>
+                        <th>Benefits</th>
+                        <th>Challenges</th>
+                        <th>Feasibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Revenue Decoupling</strong></td>
+                        <td class="pro">Removes utility incentive to oppose efficiency/solar</td>
+                        <td class="con">May raise rates if sales decline faster than costs</td>
+                        <td class="neutral">High — Already authorized by SB 300</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance-Based Ratemaking</strong></td>
+                        <td class="pro">Rewards reliability, clean energy, customer satisfaction</td>
+                        <td class="con">Metrics selection is contentious; harder to administer</td>
+                        <td class="neutral">Moderate — In development</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fuel Cost Sharing</strong></td>
+                        <td class="pro">Gives NV Energy "skin in the game" on fuel management</td>
+                        <td class="con">Utility opposes; could raise capital costs</td>
+                        <td class="neutral">Moderate — AB 452 studying options</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expanded Community Solar</strong></td>
+                        <td class="pro">Includes renters & low-income in clean energy benefits</td>
+                        <td class="con">Credit rates and program design need careful balance</td>
+                        <td class="neutral">High — AB 465 started this path</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Low-Income Protections</strong></td>
+                        <td class="pro">Shields vulnerable from rate shocks; improves equity</td>
+                        <td class="con">Requires funding (cross-subsidy or tax)</td>
+                        <td class="neutral">High — Bipartisan interest</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-number">Section 06</div>
+            <h2 class="section-title">Visualizing the System</h2>
+        </div>
+
+        <div class="cards-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="chart-container">
+                <div class="chart-title">Where Your Electric Bill Goes</div>
+                <div class="chart-caption">Approximate breakdown of NV Energy residential rates</div>
+                <div class="chart-wrapper">
+                    <canvas id="billChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">Clean Energy Trajectory</div>
+                <div class="chart-caption">Nevada's renewable portfolio standards timeline</div>
+                <div class="chart-wrapper">
+                    <canvas id="rpsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Takeaways -->
+    <section class="section" id="takeaways">
+        <div class="takeaways">
+            <h3>Key Takeaways</h3>
+            <ul class="takeaways-list">
+                <li>
+                    <span class="takeaway-number">1</span>
+                    <div>
+                        <strong>You're in a regulated monopoly.</strong> NV Energy has no retail competition. Rates are set by the PUCN, not markets. The utility profits from capital investments, not from keeping fuel costs low.
+                    </div>
+                </li>
+                <li>
+                    <span class="takeaway-number">2</span>
+                    <div>
+                        <strong>Customers bear all fuel price risk.</strong> When gas prices spiked ~70% in 2022, bills jumped ~$15/month. NV Energy's shareholders were insulated; you absorbed the hit.
+                    </div>
+                </li>
+                <li>
+                    <span class="takeaway-number">3</span>
+                    <div>
+                        <strong>Rooftop solar creates structural tension.</strong> Customer generation erodes utility sales. NV Energy has fought to limit net metering—but public backlash in 2015-17 proved consumer voices matter.
+                    </div>
+                </li>
+                <li>
+                    <span class="takeaway-number">4</span>
+                    <div>
+                        <strong>Reform momentum is real.</strong> Nevada has passed sweeping clean energy laws. Performance-based ratemaking, decoupling, and fuel cost sharing are on the table—but need sustained advocacy.
+                    </div>
+                </li>
+                <li>
+                    <span class="takeaway-number">5</span>
+                    <div>
+                        <strong>Your voice has changed policy.</strong> The 2017 "Solar Bill of Rights" happened because of public outcry. Attending PUCN hearings and contacting legislators matters.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What to Watch -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-number">Section 07</div>
+            <h2 class="section-title">What to Watch Next</h2>
+            <p class="section-intro">Upcoming decisions and developments that will shape Nevada's energy future.</p>
+        </div>
+
+        <div class="watch-list">
+            <div class="watch-item">
+                <div class="watch-icon">🔌</div>
+                <div>
+                    <div class="watch-title">Greenlink Construction</div>
+                    <div class="watch-desc">$2B+ transmission build-out connecting renewable zones to load centers. Watch for cost updates and timeline.</div>
+                </div>
+            </div>
+            <div class="watch-item">
+                <div class="watch-icon">🌐</div>
+                <div>
+                    <div class="watch-title">RTO Membership by 2030</div>
+                    <div class="watch-desc">Nevada must pursue joining a regional transmission organization. This could reshape wholesale markets.</div>
+                </div>
+            </div>
+            <div class="watch-item">
+                <div class="watch-icon">📈</div>
+                <div>
+                    <div class="watch-title">General Rate Cases</div>
+                    <div class="watch-desc">NV Energy files every 3 years. The next case will reveal impacts of new investments and policies.</div>
+                </div>
+            </div>
+            <div class="watch-item">
+                <div class="watch-icon">⛽</div>
+                <div>
+                    <div class="watch-title">Fuel Cost Sharing Outcome</div>
+                    <div class="watch-desc">Will AB 452's study lead to real reforms? Watch the 2027 legislative session for action.</div>
+                </div>
+            </div>
+            <div class="watch-item">
+                <div class="watch-icon">🎯</div>
+                <div>
+                    <div class="watch-title">Performance Metrics</div>
+                    <div class="watch-desc">PUCN developing performance-based ratemaking. Which metrics get chosen will shape utility incentives.</div>
+                </div>
+            </div>
+            <div class="watch-item">
+                <div class="watch-icon">🏗️</div>
+                <div>
+                    <div class="watch-title">Data Center Load Growth</div>
+                    <div class="watch-desc">New industrial loads raise questions: who pays for infrastructure expansion?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="section" id="sources">
+        <div class="sources-section">
+            <h3>Sources & Citations</h3>
+            <p style="margin-bottom: 16px; color: var(--warm-gray);">This analysis synthesizes information from regulatory filings, news coverage, and policy documents. Key sources include:</p>
+            <div class="sources-list">
+                <div><strong>[1]</strong> Vox, "The weird story of the casino that wants to quit the grid" (2015)</div>
+                <div><strong>[2]</strong> Energy and Policy Institute, NV Energy authorized return analysis (2017)</div>
+                <div><strong>[3]</strong> Utility Dive, "Nevada passes clean energy bill requiring state to join RTO" (2021)</div>
+                <div><strong>[4]</strong> NV Energy, Greenlink project documentation</div>
+                <div><strong>[5]</strong> Nevada Independent, fuel cost spike coverage (2022-2023)</div>
+                <div><strong>[6]</strong> PUCN rate case filings and consumer fact sheets</div>
+                <div><strong>[7]</strong> Nevada Legislature bill texts: AB 405, SB 300, SB 358, SB 448, AB 452</div>
+                <div><strong>[8]</strong> CitizenPortal, PUCN regulatory overview (2025)</div>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: var(--warm-gray);">
+                For full citations and links, see the source report: <a href="/sources/REPORT—Systemic Analysis of Nevada's Energy System_ NV Energy, Regulation & Reforms.pdf">"Systemic Analysis of Nevada's Energy System: NV Energy, Regulation & Reforms"</a>
+            </p>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="logo">⚡ Nevada Energy Explainer</div>
+            <p>
+                A nonpartisan analysis of Nevada's electricity system. Understanding how power flows—and who holds it.
+            </p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-link-group">
+                <h4>Sections</h4>
+                <ul>
+                    <li><a href="#actors">Key Players</a></li>
+                    <li><a href="#conflicts">Conflicts</a></li>
+                    <li><a href="#reforms">Reforms</a></li>
+                    <li><a href="#takeaways">Takeaways</a></li>
+                </ul>
+            </div>
+            <div class="footer-link-group">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://puc.nv.gov">PUCN Website</a></li>
+                    <li><a href="https://www.nvenergy.com">NV Energy</a></li>
+                    <li><a href="#sources">All Sources</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><strong>Disclaimer:</strong> This infographic was created to make complex regulatory information accessible. All claims are sourced from the referenced analysis. Verify information independently for decision-making.</p>
+            <p>Data current as of December 2025 | Based on "Systemic Analysis of Nevada's Energy System"</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Bill Breakdown Chart
+    const billCtx = document.getElementById('billChart').getContext('2d');
+    new Chart(billCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Generation & Fuel', 'Transmission', 'Distribution', 'Fixed Charges', 'Riders & Programs'],
+            datasets: [{
+                data: [45, 15, 25, 10, 5],
+                backgroundColor: [
+                    '#d69e2e',
+                    '#1a365d',
+                    '#4a5d4a',
+                    '#E07A5F',
+                    '#9aa0a6'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        color: '#0D1B2A',
+                        padding: 16,
+                        font: { size: 12 }
+                    }
+                }
+            }
+        }
+    });
+
+    // RPS Timeline Chart
+    const rpsCtx = document.getElementById('rpsChart').getContext('2d');
+    new Chart(rpsCtx, {
+        type: 'line',
+        data: {
+            labels: ['2020', '2025', '2030', '2040', '2050'],
+            datasets: [{
+                label: 'RPS Target (%)',
+                data: [22, 34, 50, 75, 100],
+                borderColor: '#4a5d4a',
+                backgroundColor: 'rgba(74, 93, 74, 0.1)',
+                fill: true,
+                tension: 0.3,
+                pointBackgroundColor: '#4a5d4a',
+                pointRadius: 6,
+                pointHoverRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                    ticks: {
+                        color: '#6B6B6B',
+                        callback: value => value + '%'
+                    }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#6B6B6B' }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
