@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The State of Education in Nevada 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --desert-sand: #E8DFD0;
+            --silver-sage: #9CAF88;
+            --nevada-blue: #1E3A5F;
+            --sunset-coral: #E07A5F;
+            --canyon-red: #C44536;
+            --midnight: #0D1B2A;
+            --gold-accent: #D4A373;
+            --soft-white: #FAFAF8;
+            --warm-gray: #6B6B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--soft-white);
+            color: var(--midnight);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--nevada-blue) 0%, var(--midnight) 100%);
+            color: white;
+            padding: 60px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold-accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sunset-coral);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            color: var(--nevada-blue);
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            color: var(--warm-gray);
+            max-width: 700px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .card-accent {
+            border-left: 4px solid var(--sunset-coral);
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--nevada-blue);
+        }
+
+        /* Comparison Bars */
+        .comparison-row {
+            margin-bottom: 24px;
+        }
+
+        .comparison-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparison-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .bar-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bar-label {
+            width: 100px;
+            font-size: 0.8rem;
+            color: var(--warm-gray);
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 28px;
+            background: var(--desert-sand);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar {
+            height: 100%;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: white;
+            transition: width 1s ease-out;
+        }
+
+        .bar-nevada {
+            background: linear-gradient(90deg, var(--sunset-coral), var(--canyon-red));
+        }
+
+        .bar-national {
+            background: linear-gradient(90deg, var(--silver-sage), #7A9A6C);
+        }
+
+        /* Big Number */
+        .big-number {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .big-number-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--nevada-blue);
+            line-height: 1;
+        }
+
+        .big-number-unit {
+            font-size: 1.5rem;
+            color: var(--warm-gray);
+        }
+
+        .big-number-context {
+            font-size: 0.95rem;
+            color: var(--warm-gray);
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        /* Stat Cards */
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+
+        .stat-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.5rem;
+        }
+
+        .stat-card-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--nevada-blue);
+        }
+
+        .stat-card-label {
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+            margin-top: 4px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--desert-sand), transparent);
+            margin: 60px 0;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: 24px 0;
+        }
+
+        /* Gap Visualizer */
+        .gap-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f8f6f3 0%, #f0ebe4 100%);
+            border-radius: 20px;
+            margin: 24px 0;
+        }
+
+        .gap-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .gap-circle-nevada {
+            background: linear-gradient(135deg, var(--sunset-coral), var(--canyon-red));
+        }
+
+        .gap-circle-national {
+            background: linear-gradient(135deg, var(--silver-sage), #6B8E5E);
+        }
+
+        .gap-circle-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .gap-circle-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .gap-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--warm-gray);
+        }
+
+        .gap-arrow-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--canyon-red);
+        }
+
+        .gap-arrow-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* Progress Indicator */
+        .progress-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--desert-sand);
+        }
+
+        .progress-item:last-child {
+            border-bottom: none;
+        }
+
+        .progress-indicator {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .progress-up {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .progress-down {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+
+        .progress-neutral {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+
+        .progress-content h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .progress-content p {
+            font-size: 0.9rem;
+            color: var(--warm-gray);
+        }
+
+        /* Callout Box */
+        .callout {
+            background: linear-gradient(135deg, var(--nevada-blue), var(--midnight));
+            color: white;
+            border-radius: 20px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .callout-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .callout-list {
+            list-style: none;
+        }
+
+        .callout-list li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .callout-list li:last-child {
+            border-bottom: none;
+        }
+
+        .callout-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+            font-weight: 700;
+        }
+
+        /* Equity Section */
+        .equity-bars {
+            margin: 24px 0;
+        }
+
+        .equity-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .equity-label {
+            width: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .equity-bar-container {
+            flex: 1;
+            height: 36px;
+            background: var(--desert-sand);
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .equity-bar {
+            height: 100%;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: white;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--sunset-coral), var(--silver-sage));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 32px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--sunset-coral);
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--sunset-coral);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content {
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--midnight);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.7;
+            font-size: 0.85rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gap-visual {
+                flex-direction: column;
+            }
+
+            .gap-arrow {
+                transform: rotate(90deg);
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Highlight */
+        .highlight {
+            background: linear-gradient(120deg, rgba(212,163,115,0.3) 0%, rgba(212,163,115,0.3) 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">📊 2025 Comprehensive Report</div>
+            <h1>The State of Education in Nevada</h1>
+            <p class="hero-subtitle">A visual analysis of student outcomes, funding gaps, workforce challenges, and the path forward for Nevada's schools.</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">50th</div>
+                    <div class="hero-stat-label">in K-12 Achievement Rankings</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">$4K</div>
+                    <div class="hero-stat-label">Below National Per-Pupil Spending</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">81%</div>
+                    <div class="hero-stat-label">Graduation Rate (vs 86% US)</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">9%</div>
+                    <div class="hero-stat-label">4-Year-Olds in State Pre-K</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Student Outcomes Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">01 — Student Outcomes</div>
+                <h2 class="section-title">Nevada Students Trail Behind</h2>
+                <p class="section-intro">On national assessments, Nevada consistently scores below the U.S. average. Only about 25-30% of students are proficient in core subjects.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">NAEP Proficiency Rates: Nevada vs. National Average</div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">
+                        <span>4th Grade Math</span>
+                    </div>
+                    <div class="comparison-bars">
+                        <div class="bar-wrapper">
+                            <span class="bar-label">Nevada</span>
+                            <div class="bar-container">
+                                <div class="bar bar-nevada" style="width: 72%;">26%</div>
+                            </div>
+                        </div>
+                        <div class="bar-wrapper">
+                            <span class="bar-label">National</span>
+                            <div class="bar-container">
+                                <div class="bar bar-national" style="width: 100%;">36%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">
+                        <span>8th Grade Math</span>
+                    </div>
+                    <div class="comparison-bars">
+                        <div class="bar-wrapper">
+                            <span class="bar-label">Nevada</span>
+                            <div class="bar-container">
+                                <div class="bar bar-nevada" style="width: 81%;">21%</div>
+                            </div>
+                        </div>
+                        <div class="bar-wrapper">
+                            <span class="bar-label">National</span>
+                            <div class="bar-container">
+                                <div class="bar bar-national" style="width: 100%;">26%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">
+                        <span>4th Grade Reading</span>
+                    </div>
+                    <div class="comparison-bars">
+                        <div class="bar-wrapper">
+                            <span class="bar-label">Nevada</span>
+                            <div class="bar-container">
+                                <div class="bar bar-nevada" style="width: 74%;">25%</div>
+                            </div>
+                        </div>
+                        <div class="bar-wrapper">
+                            <span class="bar-label">National</span>
+                            <div class="bar-container">
+                                <div class="bar bar-national" style="width: 100%;">34%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">
+                        <span>8th Grade Reading</span>
+                    </div>
+                    <div class="comparison-bars">
+                        <div class="bar-wrapper">
+                            <span class="bar-label">Nevada</span>
+                            <div class="bar-container">
+                                <div class="bar bar-nevada" style="width: 90%;">27%</div>
+                            </div>
+                        </div>
+                        <div class="bar-wrapper">
+                            <span class="bar-label">National</span>
+                            <div class="bar-container">
+                                <div class="bar bar-national" style="width: 100%;">30%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">📚 Early Literacy Crisis</div>
+                    <div class="big-number">
+                        <span class="big-number-value">&lt;50%</span>
+                    </div>
+                    <p class="big-number-context">of Nevada 3rd graders read at grade level — a critical milestone that predicts high school graduation. In 2022, only about 1 in 4 fourth-graders scored proficient on reading exams.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">🎓 College Readiness Gap</div>
+                    <div class="big-number">
+                        <span class="big-number-value">13%</span>
+                    </div>
+                    <p class="big-number-context">of Nevada ACT-tested students met all four college-ready benchmarks (English, math, reading, science). Over 40% of university-bound graduates need remedial coursework.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">10-Year Graduation Rate Trend</div>
+                <div class="chart-container">
+                    <canvas id="gradRateChart"></canvas>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--warm-gray); margin-top: 16px;">Nevada's graduation rate climbed from 71% (2013) to 84% (2019), but the pandemic caused a setback, dropping to 81% by 2023.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Funding Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">02 — Funding & Resources</div>
+                <h2 class="section-title">Chronically Underfunded Schools</h2>
+                <p class="section-intro">Despite a record $2.6 billion budget boost in 2023, Nevada remains roughly 45th–49th in school funding nationally.</p>
+            </div>
+
+            <div class="gap-visual">
+                <div class="gap-circle gap-circle-nevada">
+                    <div class="gap-circle-value">$13K</div>
+                    <div class="gap-circle-label">Nevada</div>
+                </div>
+                <div class="gap-arrow">
+                    <div class="gap-arrow-value">$4,000</div>
+                    <div class="gap-arrow-label">Gap</div>
+                </div>
+                <div class="gap-circle gap-circle-national">
+                    <div class="gap-circle-value">$17K</div>
+                    <div class="gap-circle-label">Recommended</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Per-Pupil Spending Comparison (2024)</div>
+                <div class="chart-container">
+                    <canvas id="fundingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="stat-card">
+                    <div class="stat-card-icon" style="background: #FFF3E0;">💰</div>
+                    <div class="stat-card-value">57%</div>
+                    <div class="stat-card-label">of adequate funding Nevada provides to high-poverty districts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon" style="background: #E3F2FD;">📊</div>
+                    <div class="stat-card-value">45th</div>
+                    <div class="stat-card-label">Nevada's typical rank in state education funding</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon" style="background: #E8F5E9;">📈</div>
+                    <div class="stat-card-value">31%</div>
+                    <div class="stat-card-label">increase in per-student funding from 2018 to 2025</div>
+                </div>
+            </div>
+
+            <div class="card card-accent" style="margin-top: 24px;">
+                <div class="card-title">The New Funding Formula (PCFP)</div>
+                <p style="margin-bottom: 16px;">In 2021, Nevada implemented the Pupil-Centered Funding Plan, replacing a 1967 formula. It uses weights to direct more funds to students with greater needs:</p>
+                
+                <div class="grid-3" style="margin-top: 20px;">
+                    <div style="text-align: center; padding: 16px; background: var(--desert-sand); border-radius: 12px;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--sunset-coral);">+45%</div>
+                        <div style="font-size: 0.8rem; color: var(--warm-gray);">English Learners</div>
+                    </div>
+                    <div style="text-align: center; padding: 16px; background: var(--desert-sand); border-radius: 12px;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--sunset-coral);">+24%</div>
+                        <div style="font-size: 0.8rem; color: var(--warm-gray);">At-Risk Students</div>
+                    </div>
+                    <div style="text-align: center; padding: 16px; background: var(--desert-sand); border-radius: 12px;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--sunset-coral);">+12%</div>
+                        <div style="font-size: 0.8rem; color: var(--warm-gray);">Gifted & Talented</div>
+                    </div>
+                </div>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--warm-gray);">While more transparent and equitable, experts say Nevada needs $3.2 billion more over 10 years to reach funding adequacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Teacher Workforce Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">03 — Educator Workforce</div>
+                <h2 class="section-title">Teacher Shortage Easing After Raises</h2>
+                <p class="section-intro">Recent 15–20% salary increases and hiring incentives have significantly reduced vacancies, but challenges remain in hard-to-staff areas.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Clark County Teaching Vacancies</div>
+                <div class="chart-container">
+                    <canvas id="vacancyChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">📈 Progress Made</div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-up">↓90%</div>
+                        <div class="progress-content">
+                            <h4>Vacancies Plummeted</h4>
+                            <p>Clark County went from ~1,500 vacancies (2022) to just 320 (2025)</p>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-up">↓30%</div>
+                        <div class="progress-content">
+                            <h4>Attrition Dropped</h4>
+                            <p>Teacher turnover fell from ~12% to 8–9% year-over-year</p>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-up">↑18%</div>
+                        <div class="progress-content">
+                            <h4>Salaries Rose</h4>
+                            <p>Average pay increased from $57K (2019) to $67K (2024)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">⚠️ Ongoing Challenges</div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-down">!</div>
+                        <div class="progress-content">
+                            <h4>Special Education</h4>
+                            <p>Chronic shortages continue despite extra stipends</p>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-neutral">~</div>
+                        <div class="progress-content">
+                            <h4>Cost of Living</h4>
+                            <p>Housing costs offset salary gains in Las Vegas and Reno</p>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-indicator progress-down">!</div>
+                        <div class="progress-content">
+                            <h4>Rural Schools</h4>
+                            <p>Remote areas still struggle to recruit and retain teachers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Teacher Salary Comparison (2024)</div>
+                <div class="equity-bars">
+                    <div class="equity-row">
+                        <span class="equity-label">California</span>
+                        <div class="equity-bar-container">
+                            <div class="equity-bar" style="width: 100%; background: linear-gradient(90deg, var(--silver-sage), #6B8E5E);">$95,000</div>
+                        </div>
+                    </div>
+                    <div class="equity-row">
+                        <span class="equity-label">U.S. Average</span>
+                        <div class="equity-bar-container">
+                            <div class="equity-bar" style="width: 76%; background: linear-gradient(90deg, #7EB3D7, #5A9BC9);">$72,000</div>
+                        </div>
+                    </div>
+                    <div class="equity-row">
+                        <span class="equity-label">Nevada</span>
+                        <div class="equity-bar-container">
+                            <div class="equity-bar" style="width: 71%; background: linear-gradient(90deg, var(--sunset-coral), var(--canyon-red));">$67,000</div>
+                        </div>
+                    </div>
+                    <div class="equity-row">
+                        <span class="equity-label">Arizona</span>
+                        <div class="equity-bar-container">
+                            <div class="equity-bar" style="width: 65%; background: linear-gradient(90deg, #D4A373, #B8956C);">$62,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Equity Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">04 — Equity Gaps</div>
+                <h2 class="section-title">Wide Disparities Persist</h2>
+                <p class="section-intro">Achievement varies starkly by race, income, and geography. These longstanding gaps widened during the pandemic.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">8th Grade Math Proficiency by Race/Ethnicity (NAEP 2022)</div>
+                <div class="chart-container">
+                    <canvas id="equityChart"></canvas>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--warm-gray); margin-top: 16px;">Black students score on average 29 points lower than White students on NAEP — equivalent to roughly 3 years of learning.</p>
+            </div>
+
+            <div class="callout">
+                <div class="callout-title">The Numbers Tell the Story</div>
+                <ul class="callout-list">
+                    <li><strong>Only 4%</strong> of Black 8th graders reached NAEP math proficiency vs. <strong>34%</strong> of White students</li>
+                    <li>Low-income students score <strong>21 points lower</strong> on average than non-disadvantaged peers</li>
+                    <li>Graduation rates: White students (~89%) vs. Black students (~72%) vs. Hispanic students (~80%)</li>
+                    <li>Only <strong>5%</strong> of English Learner students scored proficient in reading</li>
+                    <li>Students with disabilities have a <strong>67%</strong> graduation rate vs. 83% for general education</li>
+                </ul>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">🏙️ Urban Challenges</div>
+                    <p>Clark County (Las Vegas) educates ~65% of Nevada's students and faces concentrated poverty, high ELL populations, and overcrowded schools. Some high schools operate at 128% capacity.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">🏔️ Rural Realities</div>
+                    <p>Rural districts struggle with limited course offerings, teacher vacancies, and technology gaps. However, close-knit communities often achieve higher graduation rates through personalized support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Early Childhood & Pipeline Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">05 — The Pipeline</div>
+                <h2 class="section-title">From Pre-K to Workforce</h2>
+                <p class="section-intro">Nevada invests little in early childhood and loses students at every stage of the education pipeline.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Pre-K Access Crisis</div>
+                <div class="gap-visual" style="background: white;">
+                    <div class="gap-circle gap-circle-nevada" style="width: 100px; height: 100px;">
+                        <div class="gap-circle-value" style="font-size: 1.5rem;">9%</div>
+                        <div class="gap-circle-label" style="font-size: 0.65rem;">Nevada</div>
+                    </div>
+                    <div style="font-size: 2rem; color: var(--warm-gray);">vs</div>
+                    <div class="gap-circle gap-circle-national" style="width: 100px; height: 100px;">
+                        <div class="gap-circle-value" style="font-size: 1.5rem;">34%</div>
+                        <div class="gap-circle-label" style="font-size: 0.65rem;">National</div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--warm-gray); margin-top: 16px;">Percentage of 4-year-olds enrolled in state-funded pre-K</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">The Leaky Pipeline: What Happens to 100 9th Graders?</div>
+                <div class="chart-container" style="height: 280px;">
+                    <canvas id="pipelineChart"></canvas>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--warm-gray); margin-top: 16px;">Only about 44% of Nevada high school graduates enroll in college immediately, and many who do need remedial coursework.</p>
+            </div>
+
+            <div class="grid-2" style="margin-top: 24px;">
+                <div class="stat-card">
+                    <div class="stat-card-icon" style="background: #FFEBEE;">📉</div>
+                    <div class="stat-card-value">69%</div>
+                    <div class="stat-card-label">of community college entrants required remedial math or English</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon" style="background: #E8F5E9;">✓</div>
+                    <div class="stat-card-value">95%</div>
+                    <div class="stat-card-label">graduation rate for CTE program completers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="divider"></div></div>
+
+    <!-- Path Forward Section -->
+    <section class="section" style="background: linear-gradient(180deg, #f8f6f3 0%, var(--soft-white) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">06 — The Path Forward</div>
+                <h2 class="section-title">What Nevada Must Do</h2>
+                <p class="section-intro">Nevada stands at a crossroads. With sustained investment and strategic focus, progress is possible.</p>
+            </div>
+
+            <div class="callout">
+                <div class="callout-title">🎯 Three Most Urgent Priorities</div>
+                <ul class="callout-list">
+                    <li><strong>Invest in Early Literacy:</strong> Ensure all students read proficiently by Grade 3 through expanded pre-K, science of reading implementation, and targeted tutoring</li>
+                    <li><strong>Sustain Funding Increases:</strong> Close the ~$4,000 per-pupil spending gap with national averages by maintaining recent budget gains</li>
+                    <li><strong>Address Teacher Pipeline:</strong> Continue salary improvements, mentoring programs, and support for high-need schools to make Nevada competitive for educators</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Signs of Progress</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">NAEP 4th-grade scores improved 4 points, narrowing the national gap. Nearly a third of Nevada schools improved their star rating.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">Record $2.6 billion education budget increase. $250 million allocated for teacher raises, resulting in 15-20% salary boosts.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">New Pupil-Centered Funding Plan implemented, increasing transparency and equity in funding distribution.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-content">Graduation rate peaked at 84.1%, reflecting a decade of sustained focus on reducing dropouts.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-accent">
+                <div class="card-title">💡 Bright Spots to Scale</div>
+                <p style="margin-bottom: 16px;">Several Nevada schools and programs have achieved exceptional results despite challenges:</p>
+                <ul style="padding-left: 20px; color: var(--warm-gray);">
+                    <li style="margin-bottom: 8px;"><strong>West Career & Technical Academy:</strong> 99% graduation rate with career-themed education</li>
+                    <li style="margin-bottom: 8px;"><strong>Magnet schools:</strong> Specialized programs engaging diverse students with above-average outcomes</li>
+                    <li style="margin-bottom: 8px;"><strong>Zoom Schools:</strong> EL literacy rates improved 7+ percentage points over four years</li>
+                    <li style="margin-bottom: 8px;"><strong>CTE pathways:</strong> 95%+ graduation rates for students completing career programs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Data sources: Nevada Department of Education, NAEP/NCES, The Nevada Independent, NSHE, Education Week Quality Counts, and other state and federal education reports. Compiled 2025.</p>
+            <p class="footer-text" style="margin-top: 16px;">
+                <a href="/sources/state_of_education_in_nevada_2025.pdf" style="color: var(--gold-accent); text-decoration: underline;">Download full source report (PDF)</a> ·
+                <a href="/compare/issues/education.html" style="color: var(--gold-accent); text-decoration: underline;">Compare candidates on education</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Graduation Rate Chart
+        const gradCtx = document.getElementById('gradRateChart').getContext('2d');
+        new Chart(gradCtx, {
+            type: 'line',
+            data: {
+                labels: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: 'Nevada Graduation Rate',
+                    data: [71, 72, 73, 74, 80, 83, 84, 82, 82, 82, 81],
+                    borderColor: '#E07A5F',
+                    backgroundColor: 'rgba(224, 122, 95, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#E07A5F',
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }, {
+                    label: 'U.S. Average',
+                    data: [81, 82, 83, 84, 85, 85, 86, 86, 86, 86, 86],
+                    borderColor: '#9CAF88',
+                    borderDash: [5, 5],
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { usePointStyle: true, padding: 20 }
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 65,
+                        max: 95,
+                        ticks: { callback: value => value + '%' }
+                    }
+                }
+            }
+        });
+
+        // Funding Chart
+        const fundingCtx = document.getElementById('fundingChart').getContext('2d');
+        new Chart(fundingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['New York', 'U.S. Average', 'Recommended\n(Adequacy)', 'Nevada', 'Arizona'],
+                datasets: [{
+                    label: 'Per-Pupil Spending',
+                    data: [30000, 17000, 17000, 13000, 10500],
+                    backgroundColor: ['#9CAF88', '#7EB3D7', '#D4A373', '#E07A5F', '#B8956C'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: value => '$' + (value/1000) + 'K' }
+                    }
+                }
+            }
+        });
+
+        // Vacancy Chart
+        const vacancyCtx = document.getElementById('vacancyChart').getContext('2d');
+        new Chart(vacancyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'Teacher Vacancies (Clark County)',
+                    data: [1500, 1300, 800, 500, 320],
+                    backgroundColor: function(context) {
+                        const chart = context.chart;
+                        const {ctx, chartArea} = chart;
+                        if (!chartArea) return '#E07A5F';
+                        const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                        gradient.addColorStop(0, '#E07A5F');
+                        gradient.addColorStop(1, '#C44536');
+                        return gradient;
+                    },
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Equity Chart
+        const equityCtx = document.getElementById('equityChart').getContext('2d');
+        new Chart(equityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Asian', 'White', 'Hispanic', 'Black'],
+                datasets: [{
+                    label: 'Proficiency Rate',
+                    data: [45, 34, 13, 4],
+                    backgroundColor: ['#9CAF88', '#7EB3D7', '#D4A373', '#E07A5F'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 50,
+                        ticks: { callback: value => value + '%' }
+                    }
+                }
+            }
+        });
+
+        // Pipeline Chart
+        const pipelineCtx = document.getElementById('pipelineChart').getContext('2d');
+        new Chart(pipelineCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Enter 9th Grade', 'Graduate HS', 'Enroll in College', 'Still Enrolled Y2', 'Graduate College'],
+                datasets: [{
+                    label: 'Students',
+                    data: [100, 81, 44, 25, 18],
+                    backgroundColor: function(context) {
+                        const index = context.dataIndex;
+                        const colors = ['#1E3A5F', '#2D5A8A', '#4A7AB5', '#7EB3D7', '#9CAF88'];
+                        return colors[index];
+                    },
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw + ' students';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 110
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
