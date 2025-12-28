@@ -4,338 +4,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Immigration in Nevada | Enforcement, Economy, Litigation</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0f2a43;
-      --gold: #d6a230;
-      --sand: #f7f3ec;
-      --ink: #0d1b2a;
-      --gray: #637084;
-      --green: #1c7c54;
-      --amber: #d97706;
-      --red: #b91c1c;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--sand);
-      color: var(--ink);
-      line-height: 1.6;
-    }
-
-    a { color: var(--gold); }
-
-    .hero {
-      background: linear-gradient(135deg, var(--navy), #132f4e);
-      color: white;
-      padding: 64px 24px 48px;
-    }
-
-    .hero-inner { max-width: 1100px; margin: 0 auto; }
-    .eyebrow {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      background: rgba(255,255,255,0.08);
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.3rem, 6vw, 3.6rem);
-      margin-bottom: 16px;
-      line-height: 1.1;
-    }
-    .hero p { max-width: 820px; color: rgba(255,255,255,0.9); font-size: 1.1rem; }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-top: 32px;
-    }
-    .stat {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 16px;
-    }
-    .stat-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--gold);
-      font-weight: 800;
-    }
-    .stat-label { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-top: 6px; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 48px 24px 64px; }
-    .section { margin-bottom: 48px; }
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-    .section p { color: var(--gray); font-size: 1rem; }
-    .pill {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #3730a3;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      border: 1px solid rgba(0,0,0,0.04);
-      box-shadow: 0 10px 30px rgba(15, 42, 67, 0.05);
-    }
-    .card h3 {
-      font-size: 1.1rem;
-      color: var(--ink);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .card p { color: var(--gray); font-size: 0.98rem; }
-    .badge-red { background: rgba(185,28,28,0.1); color: var(--red); }
-    .badge-green { background: rgba(28,124,84,0.12); color: var(--green); }
-    .badge-amber { background: rgba(217,119,6,0.12); color: var(--amber); }
-
-    .list {
-      margin-top: 12px;
-      color: var(--gray);
-      padding-left: 18px;
-    }
-    .list li { margin-bottom: 6px; }
-
-    .callout {
-      border-left: 4px solid var(--gold);
-      background: white;
-      padding: 16px;
-      border-radius: 12px;
-      margin-top: 14px;
-      box-shadow: 0 6px 20px rgba(15, 42, 67, 0.05);
-    }
-
-    .source-link { font-weight: 700; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); }
-
-    @media (max-width: 640px) {
-      .stats { grid-template-columns: 1fr; }
-    }
-  </style>
+  <title>Immigration Context Report | Nevada Governor 2026</title>
+  <meta name="description"
+    content="Deep dive on immigration in Nevada: federal vs local control, 287(g), detention trends, economic stakes, and litigation shaping 2026.">
+  <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 
-<body>
-  <header class="hero">
-    <div class="hero-inner">
-      <span class="eyebrow">Immigration Context Report</span>
-      <h1>Enforcement, Economy, and Local Power in Nevada</h1>
-      <p>
-        Nevada has the nation’s highest share of undocumented workers and a fractured enforcement landscape where
-        federal authority meets local discretion. This brief distills the full report so voters can see what’s at stake
-        in 2026.
-      </p>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value">9%</div>
-          <div class="stat-label">Share of Nevada’s total workforce that is undocumented</div>
+<body class="bg-white">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-2xl">🏜️</span>
+          <span class="font-serif font-bold text-nevada-navy">Nevada Governor Elections 2026</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/" class="nav-link">Candidates</a>
+          <a href="/compare/" class="nav-link nav-link--active">Compare</a>
+          <a href="/compare/gop-primary.html" class="nav-link">GOP Primary</a>
+          <a href="/compare/primary.html" class="nav-link">Dem Primary</a>
+          <a href="/about.html" class="nav-link">About</a>
         </div>
-        <div class="stat">
-          <div class="stat-value">650K</div>
-          <div class="stat-label">Immigrant residents (1 in 5 Nevadans)</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">$20.2B</div>
-          <div class="stat-label">Annual economic contribution from immigrants</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">4</div>
-          <div class="stat-label">Nevada agencies with 287(g) ICE agreements</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-nevada-navy text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-4 mb-4">
+        <a href="/compare/" class="text-nevada-gold hover:text-white text-sm">← Back to Compare</a>
+      </div>
+      <div class="flex items-start gap-4">
+        <span class="text-5xl">🌎</span>
+        <div>
+          <h1 class="text-4xl font-bold">Immigration: System Context</h1>
+          <p class="text-xl text-gray-200 mt-2">How federal power meets local discretion, and why it matters in 2026.</p>
+          <p class="text-sm text-gray-300 mt-2">
+            Based on <a href="/sources/REPORT—On Immigration in NV.md" class="text-nevada-gold hover:underline">REPORT—On Immigration in NV</a>.
+          </p>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <div class="pill badge-green">Federal preemption, local discretion</div>
-      <h2>Who Actually Controls Immigration?</h2>
-      <p>
-        Immigration law is federal, but the Supreme Court’s <em>Arizona v. United States</em> decision left space for
-        voluntary cooperation. Nevada has no statewide sanctuary or anti-sanctuary statute, so each sheriff and city
-        sets its own cooperation policy—choosing whether to honor ICE detainers, share booking data, or sign 287(g)
-        agreements.
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+    <!-- Stakes -->
+    <section>
+      <h2 class="section-header text-nevada-navy">The Stakes</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="stat-box">
+          <p class="stat-box__number">9%</p>
+          <p class="stat-box__label">Share of Nevada workforce undocumented<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a><span class="cite-tooltip">Immigration systems analysis</span></span></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__number">650K</p>
+          <p class="stat-box__label">Immigrant residents (1 in 5 Nevadans)<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__number">$20.2B</p>
+          <p class="stat-box__label">Annual economic contribution<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span></p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-box__number">4</p>
+          <p class="stat-box__label">Agencies with 287(g) ICE agreements<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span></p>
+        </div>
+      </div>
+      <p class="mt-6 text-gray-700 prose max-w-none">
+        Immigration is federally controlled, but Nevada’s lack of a statewide sanctuary or anti-sanctuary law leaves sheriffs and city departments to decide cooperation. That patchwork, combined with the country’s highest share of undocumented workers, makes immigration policy a live economic and public-safety issue for 2026.<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span>
       </p>
-      <div class="card-grid">
+    </section>
+
+    <!-- Control map -->
+    <section>
+      <h2 class="section-header text-nevada-navy">Who Controls What</h2>
+      <div class="grid md:grid-cols-3 gap-6">
         <div class="card">
-          <h3>Federal</h3>
-          <ul class="list">
-            <li>ICE/ERO runs arrests and deportations; CBP manages airports.</li>
-            <li>Immigration courts in Las Vegas decide cases—no state input.</li>
-            <li>DACA/TPS administration, detention standards, and removal priorities.</li>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Federal</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+            <li>ICE/ERO arrests and removals; CBP at airports.</li>
+            <li>Immigration courts in Las Vegas handle cases; no state authority.</li>
+            <li>DACA/TPS programs and detention standards.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>State</h3>
-          <ul class="list">
-            <li>Publishes model policies (AG) and workforce plans (Lt. Gov.).</li>
-            <li>Controls Guard deployments and state funds that support ICE partnerships.</li>
-            <li>Can expand or restrict access to licenses, tuition, and benefits.</li>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">State</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+            <li>Model policies from AG; workforce strategy via Lt. Governor.</li>
+            <li>Guard deployments and FEMA/ICE infrastructure approvals.</li>
+            <li>Licenses, tuition, and professional access for immigrants.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Local</h3>
-          <ul class="list">
-            <li>Decides to enter 287(g) and whether to honor detainers.</li>
-            <li>Sets jail booking notification rules and data-sharing policies.</li>
-            <li>Can decline participation on constitutional or liability grounds.</li>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Local</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+            <li>287(g) agreements and detainer decisions.</li>
+            <li>Jail booking notifications and data-sharing rules.</li>
+            <li>Can decline ICE work on constitutional/liability grounds.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="pill badge-amber">287(g) expansion</div>
-      <h2>Where Local Police Are Deputized</h2>
-      <p>Four agencies currently partner with ICE under 287(g) (Warrant Service Officer model):</p>
-      <div class="card-grid">
+    <!-- 287g -->
+    <section>
+      <h2 class="section-header text-nevada-navy">287(g): Where Local Police Are Deputized</h2>
+      <div class="grid md:grid-cols-2 gap-6">
         <div class="card">
-          <h3>Las Vegas Metro</h3>
-          <p>Rejoined June 2025 after being labeled “sanctuary.” Jail notifications for specified crimes; no community
-            enforcement. Detainer requests jumped from 32 (2024) to 957 (through Aug 2025).</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Las Vegas Metro</h3>
+          <p class="text-gray-700 text-sm">Rejoined June 2025 after “sanctuary” designation; jail notifications for selected crimes, no community enforcement. Detainer requests jumped from 32 (2024) to 957 (through Aug 2025).</p>
         </div>
         <div class="card">
-          <h3>Douglas County</h3>
-          <p>Signed February 2025. Jail-based cooperation; initial listing error as task force model corrected.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Douglas & Mineral Counties</h3>
+          <p class="text-gray-700 text-sm">Signed February 2025; jail-based cooperation, Mineral applying for task force model.</p>
         </div>
         <div class="card">
-          <h3>Mineral County</h3>
-          <p>Signed February 2025. Jail-based agreement; task force application pending.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Nye County</h3>
+          <p class="text-gray-700 text-sm">Task force roots (renewed 2020); status under review but historically pro-ICE.</p>
         </div>
-        <div class="card">
-          <h3>Nye County</h3>
-          <p>Renewed 2020; status under review. Historically supportive of broader ICE cooperation.</p>
-        </div>
-      </div>
-      <div class="callout">
-        <strong>Litigation watch:</strong> <em>Morais-Hechavarria v. LVMPD</em> argues Dillon’s Rule bars local 287(g)
-        without explicit legislative authorization—could invalidate all Nevada agreements.
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="pill badge-red">Enforcement trend</div>
-      <h2>Detentions and Arrests Are Surging</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Arrests</h3>
-          <p>ICE arrests in Nevada rose 300% January–June 2025 vs. 2024; weekly Nevada arrests now ~48 (4× Biden-era
-            pace).</p>
-        </div>
-        <div class="card">
-          <h3>Detention beds</h3>
-          <p>Nevada Southern Detention Center held 461 detainees in Nov 2025 (capacity 250). Henderson at 93, Washoe at
-            46. ICE exploring a 450-bed tent facility.</p>
-        </div>
-        <div class="card">
-          <h3>Profile of arrests</h3>
-          <p>Roughly 12–14% have no criminal record; ~70% of the rest are nonviolent (traffic and drug charges most
-            common).</p>
+        <div class="card bg-amber-50 border border-amber-200">
+          <h3 class="text-lg font-bold text-amber-900 mb-2">Litigation Watch</h3>
+          <p class="text-amber-900 text-sm"><em>Morais-Hechavarria v. LVMPD</em> tests whether Dillon’s Rule bars local 287(g) without legislative approval—could void all Nevada agreements.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="pill badge-green">Economic stakes</div>
-      <h2>Immigration Is Structural to Nevada’s Economy</h2>
-      <p>
-        Immigrants make up 24% of the workforce (400K workers) and drive core industries: 44.6% of hotel staff and 74%
-        of housekeepers are foreign-born; construction is 36% immigrant labor. Immigrant-led households hold $16.6B in
-        Las Vegas spending power and pay $1.4B in state/local taxes ($507M from undocumented workers).
-      </p>
-      <div class="card-grid">
+    <!-- Enforcement trend -->
+    <section>
+      <h2 class="section-header text-nevada-navy">Enforcement Surge</h2>
+      <div class="grid md:grid-cols-3 gap-6">
         <div class="card">
-          <h3>Labor shortages</h3>
-          <p>79% of construction firms report hiring difficulty; Las Vegas leaders cite a 100K worker shortfall.</p>
+          <h3 class="font-bold text-gray-900 mb-2">Arrests</h3>
+          <p class="text-gray-700 text-sm">ICE arrests up 300% Jan–Jun 2025 vs. 2024; ~48 per week in Nevada—four times the prior rate.<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span></p>
         </div>
         <div class="card">
-          <h3>Business ownership</h3>
-          <p>43,700 immigrant business owners—30% of all self-employed Nevadans.</p>
+          <h3 class="font-bold text-gray-900 mb-2">Detention</h3>
+          <p class="text-gray-700 text-sm">Nevada Southern held 461 detainees in Nov 2025 (capacity 250); ICE exploring an added 450-bed tent facility.</p>
         </div>
         <div class="card">
-          <h3>Top sectors</h3>
-          <p>Hospitality (31% immigrant), landscaping (76%), building services (61%), construction (36%).</p>
+          <h3 class="font-bold text-gray-900 mb-2">Profile</h3>
+          <p class="text-gray-700 text-sm">12–14% had no criminal record; ~70% of others were nonviolent (traffic and drug offenses most common).</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="pill badge-amber">Legal flashpoints</div>
-      <h2>Cases That Could Rewrite the Rules</h2>
-      <div class="card-grid">
+    <!-- Economy -->
+    <section>
+      <h2 class="section-header text-nevada-navy">Economic Dependence</h2>
+      <p class="text-gray-700 text-sm mt-2">Immigrants are 24% of Nevada’s workforce (400K workers) and anchor hospitality, construction, and services.</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
         <div class="card">
-          <h3>Morais-Hechavarria v. LVMPD</h3>
-          <p>Dillon’s Rule challenge to Metro’s 287(g) agreement; outcome could void local authority to partner with ICE
-            statewide.</p>
+          <h3 class="font-bold text-gray-900 mb-2">Hospitality</h3>
+          <p class="text-gray-700 text-sm">44.6% of hotel workers and 74% of housekeepers are foreign-born; leisure/hospitality is 16.3% of state GDP.</p>
         </div>
         <div class="card">
-          <h3>Garay v. City of Las Vegas & ICE</h3>
-          <p>Detainer practices challenged as Fourth Amendment violations; court denied motion to dismiss.</p>
+          <h3 class="font-bold text-gray-900 mb-2">Construction</h3>
+          <p class="text-gray-700 text-sm">36% immigrant workforce; 79% of firms report hiring difficulty; 100K+ worker shortfall estimated in Las Vegas.</p>
         </div>
         <div class="card">
-          <h3>ACLU v. ICE (Class Action)</h3>
-          <p>Challenges mandatory detention without bond hearings; could alter detention standards in Nevada facilities.</p>
+          <h3 class="font-bold text-gray-900 mb-2">Tax & Spending Power</h3>
+          <p class="text-gray-700 text-sm">$1.4B in state/local taxes from immigrants; $507M from undocumented workers; $16.6B spending power in Las Vegas households.<span class="cite"><a href="/sources.html#IMM1" class="cite-ref">[IMM1]</a></span></p>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="pill badge-green">What Voters Should Watch</div>
-      <h2>Policy Choices on the 2026 Ballot</h2>
-      <div class="card">
-        <h3>1) How far should Nevada cooperate with ICE?</h3>
-        <p>Future governors control Guard deployments, FEMA-funded infrastructure approvals, and whether to encourage or
-          discourage local 287(g) agreements.</p>
-      </div>
-      <div class="card">
-        <h3>2) Should the Legislature clarify local authority?</h3>
-        <p>A state law could either authorize or prohibit local participation, ending the current patchwork. Dillon’s
-          Rule litigation may force the issue.</p>
-      </div>
-      <div class="card">
-        <h3>3) Economic risk vs. enforcement drive</h3>
-        <p>With 9% of workers undocumented, aggressive detention spikes risk labor shortages in hospitality and
-          construction—central to Nevada’s economy.</p>
+    <!-- Legal flashpoints -->
+    <section>
+      <h2 class="section-header text-nevada-navy">Legal Flashpoints</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">Morais-Hechavarria v. LVMPD</h3>
+          <p class="text-gray-700 text-sm">Challenges Metro’s 287(g) under Dillon’s Rule; could bar local agencies from partnering with ICE without legislative authorization.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">Garay v. City of Las Vegas & ICE</h3>
+          <p class="text-gray-700 text-sm">Detainer practices challenged as Fourth Amendment violations; motion to dismiss denied.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">ACLU v. ICE (Class Action)</h3>
+          <p class="text-gray-700 text-sm">Targets mandatory detention without bond hearings; could alter detention standards statewide.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="callout">
-        This page distills <a class="source-link" href="/sources/REPORT—On Immigration in NV.md">REPORT—On Immigration in NV</a>.
-        For candidate-by-candidate positions, visit the <a class="source-link" href="/compare/issues/immigration.html">Immigration issue page</a>.
+    <!-- Voter questions -->
+    <section>
+      <h2 class="section-header text-nevada-navy">Questions for 2026</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">How far should Nevada cooperate with ICE?</h3>
+          <p class="text-gray-700 text-sm">Governors can deploy Guard support and approve/deny ICE infrastructure while signaling to sheriffs on 287(g).</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">Should the Legislature clarify local authority?</h3>
+          <p class="text-gray-700 text-sm">A statute could authorize or prohibit local 287(g), replacing today’s patchwork and reducing litigation risk.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-bold text-gray-900 mb-2">How to balance labor needs with enforcement?</h3>
+          <p class="text-gray-700 text-sm">With 9% of workers undocumented, aggressive detention spikes could stress hospitality and construction—the core of Nevada’s economy.</p>
+        </div>
       </div>
     </section>
+
+    <section>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-bold text-nevada-navy">Candidate positions</h3>
+          <p class="text-gray-700 text-sm">See how Lombardo, Ford, and Hill differ on cooperation, Guard deployments, and 287(g).</p>
+        </div>
+        <a href="/compare/issues/immigration.html" class="btn btn-primary">Go to Issue Page →</a>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gray-800/50 rounded-lg p-4 mb-6">
+        <p class="text-xs text-gray-400 leading-relaxed">
+          <strong class="text-gray-300">Disclaimer:</strong> This site was created with AI assistance. While
+          we have made every effort to verify claims against primary sources, errors may exist. All factual
+          claims include citations; hover over superscript numbers to see sources, or visit our <a
+            href="/sources.html" class="text-nevada-gold hover:underline">sources page</a> for complete
+          documentation including PDF dossiers. We encourage voters to verify information independently.
+        </p>
+      </div>
+      <div class="text-center">
+        <p class="text-sm">
+          <a href="/sources.html" class="text-nevada-gold hover:underline">All Sources</a> · Built for Nevada
+          voters
+        </p>
+        <p class="text-xs mt-2">© 2025 NV Gov 2026. Nonpartisan voter information. · <a
+            href="https://github.com/2b3pro/nvgov2026" class="text-nevada-gold hover:underline">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
