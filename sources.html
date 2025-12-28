@@ -528,17 +528,109 @@
       </div>
     </section>
 
-    <!-- Corrections -->
-    <section class="mb-16">
-      <h2 class="section-header text-nevada-navy">Corrections & Updates</h2>
+    <!-- Corrections Log -->
+    <section class="mb-16" id="corrections-log">
+      <h2 class="section-header text-nevada-navy">Corrections & Modifications Log</h2>
       <div class="mt-8 bg-nevada-sand rounded-xl p-6">
-        <p class="text-gray-700 mb-4">
-          We are committed to accuracy. If you find an error or a broken source link, please let us know.
-          All corrections will be logged here with dates.
+        <p class="text-gray-700 mb-6">
+          We are committed to accuracy and transparency. All material changes to site content are logged below with dates.
+          If you find an error or a broken source link, please let us know.
         </p>
-        <div class="bg-white rounded-lg p-4 border-l-4 border-nevada-gold">
-          <p class="text-sm text-gray-600 italic">No corrections to date.</p>
+
+        <!-- December 27, 2025 Update -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
+          <div class="bg-gray-100 px-6 py-4 border-b border-gray-200">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">December 27, 2025</span>
+              <span class="text-sm text-gray-600 font-medium">Fact-Check Pass: Landing Page</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <div class="mb-4">
+              <h4 class="font-semibold text-gray-900 mb-2">What Changed</h4>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <li>• Fixed poll date from "November 2024" to "November 2025" on landing page</li>
+                <li>• Corrected Lombardo's Sheriff tenure from "2015-2022" to "2014-2022"</li>
+                <li>• Removed ungrounded Ford "$165M legal fees" claim; replaced with sourced SB 485 contradiction</li>
+                <li>• Clarified Ford opioid claim as "aggregate" settlements; added Nevada AG primary source</li>
+                <li>• Updated poll tooltip reference to match correct Emerson College poll</li>
+                <li>• Updated "Data current as of" date to 2025-12-27</li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h4 class="font-semibold text-gray-900 mb-2">Why It Changed</h4>
+              <p class="text-sm text-gray-700">
+                Rigorous fact-checking pass against forensic profile source documents identified a transcription
+                error in the poll date (the Emerson College poll was conducted November 16-18, 2025, not 2024)
+                and an incorrect start year for Sheriff Lombardo's tenure (elected 2014, not 2015).
+              </p>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="text-left px-3 py-2 font-semibold text-gray-700">Claim</th>
+                    <th class="text-left px-3 py-2 font-semibold text-gray-700">Action</th>
+                    <th class="text-left px-3 py-2 font-semibold text-gray-700">Reason</th>
+                    <th class="text-left px-3 py-2 font-semibold text-gray-700">Source</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">Emerson Poll date</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded">Corrected</span></td>
+                    <td class="px-3 py-2 text-gray-600">Transcription error</td>
+                    <td class="px-3 py-2 text-gray-600">Emerson College, Nov 21, 2025</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">Sheriff dates</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded">Corrected</span></td>
+                    <td class="px-3 py-2 text-gray-600">Incorrect start year</td>
+                    <td class="px-3 py-2 text-gray-600">LVMPD records, Ballotpedia</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">162 vetoes</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded">Verified</span></td>
+                    <td class="px-3 py-2 text-gray-600">Accurate (75+87)</td>
+                    <td class="px-3 py-2 text-gray-600">Nevada Independent</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">$25M Bigelow donations</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded">Verified</span></td>
+                    <td class="px-3 py-2 text-gray-600">Matches source</td>
+                    <td class="px-3 py-2 text-gray-600">AP News</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">Hansen 1.2%/849 votes</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded">Verified</span></td>
+                    <td class="px-3 py-2 text-gray-600">Accurate</td>
+                    <td class="px-3 py-2 text-gray-600">Ballotpedia</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">Ford "$165M legal fees"</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-red-100 text-red-800 text-xs rounded">Removed</span></td>
+                    <td class="px-3 py-2 text-gray-600">Ungrounded claim</td>
+                    <td class="px-3 py-2 text-gray-600">Replaced with SB 485 (sourced)</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 py-2 text-gray-700">Ford $1.1B opioid</td>
+                    <td class="px-3 py-2"><span class="px-2 py-0.5 bg-blue-100 text-blue-800 text-xs rounded">Clarified</span></td>
+                    <td class="px-3 py-2 text-gray-600">Added "aggregate" qualifier</td>
+                    <td class="px-3 py-2 text-gray-600">Nevada AG Office (primary)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-4">
+              Full fact-check report: <a href="/sources/fact-check-landing-2025-12-27.md" class="text-nevada-navy hover:underline">sources/fact-check-landing-2025-12-27.md</a>
+            </p>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -564,6 +656,7 @@
           primarily conducted using <strong>Google Deep Research Gemini 3.0</strong>. The initial site design
           and grounding of citations were performed by <strong>Claude Opus 4.5</strong>. SEO optimization,
           sitemap generation, and other formatting tasks were completed by <strong>Gemini 2.5 Pro</strong>.
+          Fact-checking was performed by <strong>ChatGPT v5.2</strong> and <strong>Claude Opus 4.5</strong>.
         </p>
       </div>
       <div class="text-center">
