@@ -32,6 +32,7 @@ export default defineConfig({
         issues_transparency: resolve(__dirname, 'compare/issues/transparency.html'),
         issues_abortion: resolve(__dirname, 'compare/issues/abortion.html'),
         issues_labor: resolve(__dirname, 'compare/issues/labor.html'),
+        issues_cost_of_living: resolve(__dirname, 'compare/issues/cost-of-living.html'),
         // Context/Deep-dive Pages
         context_education: resolve(__dirname, 'compare/issues/context/education.html'),
         context_energy: resolve(__dirname, 'compare/issues/context/energy.html'),
