@@ -36,6 +36,7 @@ export default defineConfig({
         // Context/Deep-dive Pages
         context_education: resolve(__dirname, 'compare/issues/context/education.html'),
         context_energy: resolve(__dirname, 'compare/issues/context/energy.html'),
+        context_immigration: resolve(__dirname, 'compare/issues/context/immigration.html'),
       },
     },
   },
