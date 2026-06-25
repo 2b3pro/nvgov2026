@@ -135,6 +135,26 @@ h4 {
   display: none !important;
 }
 
+.issue-candidate-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.issue-candidate-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .issue-candidate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .issue-candidate-grid > * {
+    height: 100%;
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
