@@ -63,7 +63,7 @@
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <main class="issue-general-election max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
     <!-- The Stakes -->
     <section class="mb-16">
@@ -268,7 +268,7 @@
         </div>
 
         <!-- Hill -->
-        <div class="bg-white rounded-xl shadow-sm border-l-4 border-hill p-6">
+        <div class="bg-white rounded-xl shadow-sm border-l-4 border-hill p-6 primary-archive-only">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-12 h-12 rounded-full bg-hill-light flex items-center justify-center text-2xl">📋</div>
             <div>
@@ -318,7 +318,7 @@
         </div>
 
         <!-- Hansen -->
-        <div class="bg-white rounded-xl shadow-sm border-l-4 p-6" style="border-color: var(--color-hansen);">
+        <div class="bg-white rounded-xl shadow-sm border-l-4 p-6 primary-archive-only" style="border-color: var(--color-hansen);">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl" style="background-color: var(--color-hansen-light);">💼</div>
             <div>
@@ -363,7 +363,7 @@
         </div>
 
         <!-- Winterhawk -->
-        <div class="bg-white rounded-xl shadow-sm border-l-4 p-6" style="border-color: var(--color-winterhawk);">
+        <div class="bg-white rounded-xl shadow-sm border-l-4 p-6 primary-archive-only" style="border-color: var(--color-winterhawk);">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl" style="background-color: var(--color-winterhawk-light);">🎤</div>
             <div>
@@ -497,9 +497,9 @@
               <th>Issue</th>
               <th class="text-lombardo">Lombardo</th>
               <th class="text-ford">Ford</th>
-              <th class="text-hill">Hill</th>
-              <th>Hansen</th>
-              <th>Winterhawk</th>
+              <th class="text-hill primary-archive-only">Hill</th>
+              <th class="primary-archive-only">Hansen</th>
+              <th class="primary-archive-only">Winterhawk</th>
             </tr>
           </thead>
           <tbody>
@@ -507,49 +507,49 @@
               <td class="font-medium">Evidence Strength</td>
               <td><span class="evidence-strong">Strong</span></td>
               <td><span class="evidence-strong">Strong</span></td>
-              <td><span class="evidence-weak">None</span></td>
-              <td><span class="evidence-mixed">Weak</span></td>
-              <td><span class="evidence-weak">None</span></td>
+              <td class="primary-archive-only"><span class="evidence-weak">None</span></td>
+              <td class="primary-archive-only"><span class="evidence-mixed">Weak</span></td>
+              <td class="primary-archive-only"><span class="evidence-weak">None</span></td>
             </tr>
             <tr>
               <td class="font-medium">Overall Position</td>
               <td>Opposes new restrictions</td>
               <td>Supports gun safety</td>
-              <td>Unknown</td>
-              <td>Presumed opposition</td>
-              <td>Unknown</td>
+              <td class="primary-archive-only">Unknown</td>
+              <td class="primary-archive-only">Presumed opposition</td>
+              <td class="primary-archive-only">Unknown</td>
             </tr>
             <tr>
               <td class="font-medium">Key Indicator</td>
               <td>6 vetoes (2023-2025)</td>
               <td>AG enforcement record</td>
-              <td>No documented positions</td>
-              <td>2A listed, no specifics</td>
-              <td>Absent from platform</td>
+              <td class="primary-archive-only">No documented positions</td>
+              <td class="primary-archive-only">2A listed, no specifics</td>
+              <td class="primary-archive-only">Absent from platform</td>
             </tr>
             <tr>
               <td class="font-medium">Age Restrictions (21)</td>
               <td><span class="text-red-700">Vetoed twice</span></td>
               <td><span class="text-green-700">Would sign</span></td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
             </tr>
             <tr>
               <td class="font-medium">Guns at Polls Ban</td>
               <td><span class="text-red-700">Vetoed twice</span></td>
               <td><span class="text-green-700">Would sign</span></td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
             </tr>
             <tr>
               <td class="font-medium">Hate Crime Gun Ban</td>
               <td><span class="text-red-700">Vetoed</span></td>
               <td><span class="text-green-700">Would sign</span></td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
-              <td>&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
+              <td class="primary-archive-only">&mdash;</td>
             </tr>
           </tbody>
         </table>
@@ -570,8 +570,7 @@
           <ul class="text-sm text-amber-800 space-y-2">
             <li>&bull; <strong>Lombardo:</strong> Would he sign any gun safety bill? What would he accept?</li>
             <li>&bull; <strong>Ford:</strong> Specific priorities beyond what Lombardo vetoed?</li>
-            <li>&bull; <strong>Hill:</strong> Any documented gun policy statements?</li>
-            <li>&bull; <strong>All candidates:</strong> Positions on magazine capacity limits, assault weapons restrictions</li>
+            <li>&bull; <strong>Both nominees:</strong> Positions on magazine capacity limits, assault weapons restrictions</li>
           </ul>
         </div>
 
@@ -595,7 +594,7 @@
         <div class="p-6 bg-blue-50 rounded-xl">
           <h3 class="font-bold text-blue-900 mb-3">Democratic Governor</h3>
           <p class="text-sm text-blue-800">
-            A Ford or Hill victory would likely mean <strong>signing the measures Lombardo vetoed</strong>: age restrictions, polling place bans, hate crime prohibitions. Continues post-2017 reform trajectory.
+            A Ford victory would likely mean <strong>signing the measures Lombardo vetoed</strong>: age restrictions, polling place bans, hate crime prohibitions. Continues post-2017 reform trajectory.
           </p>
         </div>
         <div class="p-6 bg-red-50 rounded-xl">

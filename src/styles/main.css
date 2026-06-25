@@ -123,6 +123,18 @@ h4 {
   border-top: 4px solid var(--color-winterhawk);
 }
 
+/* Keep issue pages focused on the general-election matchup. */
+.issue-general-election .primary-archive-only,
+.issue-general-election .candidate-card--hill,
+.issue-general-election .candidate-card--hansen,
+.issue-general-election .candidate-card--winterhawk,
+.issue-general-election .border-hill,
+.issue-general-election [style*="border-color: var(--color-hansen)"],
+.issue-general-election [style*="border-color: var(--color-winterhawk)"],
+.issue-general-election .bg-hill-light {
+  display: none !important;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
