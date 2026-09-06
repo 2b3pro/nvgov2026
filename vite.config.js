@@ -18,6 +18,7 @@ export default defineConfig({
         compare_gop: resolve(__dirname, 'compare/gop-primary.html'),
         compare_dem: resolve(__dirname, 'compare/primary.html'),
         about: resolve(__dirname, 'about.html'),
+        faq: resolve(__dirname, 'faq.html'),
         sources: resolve(__dirname, 'sources.html'),
         updates: resolve(__dirname, 'updates.html'),
         // Issue Pages

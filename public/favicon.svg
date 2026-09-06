@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1a365d"/>
+  <!-- Mountain silhouette -->
+  <path d="M8 48 L26 24 L38 38 L48 28 L56 48 Z" fill="#d69e2e"/>
+  <path d="M26 24 L32 32 L20 48 L8 48 Z" fill="#b7791f"/>
+  <!-- Silver State Star -->
+  <polygon points="48,14 50.5,20 57,20.5 52,24.5 54,30.5 48,27 42,30.5 44,24.5 39,20.5 45.5,20" fill="#f7f3e9"/>
+</svg>
