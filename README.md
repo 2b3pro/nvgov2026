@@ -15,6 +15,9 @@ A nonpartisan voter information site for the 2026 Nevada gubernatorial election.
 - **Aaron Ford** (Attorney General)
 - **Alexis Hill** (Washoe County Commission Chair)
 
+### General Election Only (No Political Party)
+- **Danielle Ford** (Nevada State Board of Education member; former CCSD trustee)
+
 ## Features
 
 - Individual candidate profiles with sourced claims

@@ -13,6 +13,7 @@ export default defineConfig({
         hill: resolve(__dirname, 'candidates/hill.html'),
         winterhawk: resolve(__dirname, 'candidates/winterhawk.html'),
         hansen: resolve(__dirname, 'candidates/hansen.html'),
+        danielle_ford: resolve(__dirname, 'candidates/danielle-ford.html'),
         compare: resolve(__dirname, 'compare/index.html'),
         compare_gop: resolve(__dirname, 'compare/gop-primary.html'),
         compare_dem: resolve(__dirname, 'compare/primary.html'),
