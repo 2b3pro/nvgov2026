@@ -186,21 +186,34 @@ This suggests Hill supports challenging Trump immigration policies but favors po
 - Direct statements about sanctuary policies, 287(g) participation, or ICE detainer policies
 - Media coverage substantially including Hill in Ford-Lombardo immigration debates
 
-**Note:** Hill launched her gubernatorial campaign in September 2025 and has not been prominently featured in immigration-focused coverage of the race, which has centered on the Ford-Lombardo conflict.
+**Note:** Hill launched her gubernatorial campaign in September 2025 and lost the June 2026 Democratic primary to Aaron Ford. Her positions remain documented as primary archive context.
+
+---
+
+## Danielle Ford (No Political Party - General Election Candidate): Due Process, Constitutional Limits, Ending Police Entanglement
+
+**Position summary:** Running as an independent nonpartisan candidate on the November 2026 ballot, former Clark County School Board trustee and current State Board of Education member Danielle Ford addresses immigration under her "People Over Politics" priority plank. She frames immigration as a multifaceted "human, constitutional, workforce, and community issue," balancing the rule of law with fundamental due process, and explicitly opposes entangling local police in federal immigration enforcement without statutory authorization and public oversight.
+
+### Key policy positions (from campaign platform)
+- **Local police entanglement:** Opposes local law enforcement acting as an arm or extension of federal deportation agents "without clear legal authority and oversight." Argues that blurriness between local policing and federal immigration enforcement destroys community trust, deters victims and witnesses from calling 911, and diverts local officers from solving neighborhood crime.
+- **Constitutional authority & Dillon's Rule:** Aligns with civil liberties concerns raised in *Morais-Hechavarria v. LVMPD*, questioning whether local sheriffs possess statutory authority under Nevada's Dillon's Rule to execute 287(g) contracts without explicit legislative approval.
+- **Workforce & economic integration:** Emphasizes that Nevada's immigrant workforce is essential to the state's economic stability, particularly in hospitality, construction, and public education. Warns that aggressive, uncoordinated local crackdowns disrupt families and create severe labor shortages.
+- **Humanitarian & due process focus:** Advocates protecting constitutional rights "regardless of political popularity," requiring transparent metrics, legal representation access, and humane standards in all detention and judicial processes.
 
 ---
 
 ## Comparative analysis
 
-| Issue | Lombardo (R) | Ford (D) | Hill (D) |
-|-------|--------------|----------|----------|
-| Federal vs. state role | State should support federal enforcement | Federal responsibility; state shouldn't provide "free labor" | Federal responsibility; focus on due process |
-| ICE cooperation | Expanded; signed DOJ MOU; approved FEMA funds | Limits absent judicial warrants; nonbinding model policies | Not documented |
-| National Guard | Authorized ~35 personnel for ICE administrative support | Opposed through litigation | Explicitly opposes use for "roundups" |
-| School enforcement | Vetoed AB 217 limiting ICE school access | Model policies recommend parental notification | Not specifically addressed |
-| DACA | Cut state assistance programs (2023) | Strong defender; multistate litigation | Not specifically addressed |
-| Sanctuary policy | "Nevada will never be a sanctuary state" | "I do not support sanctuary policies. Period." | Not directly addressed |
-| Comprehensive reform | Not addressed | Supports but no detailed proposal | Supports with "pathways to citizenship" |
+| Issue | Joe Lombardo (R) | Aaron Ford (D) | Danielle Ford (NPP) |
+|---|---|---|---|
+| **Federal vs. state role** | State actively assists federal enforcement; signed DOJ MOU | Federal responsibility; states should not provide "free labor" | Rule of law with due process; states should not exceed statutory bounds |
+| **287(g) Deputization Agreements** | **Supports:** Ran 287(g) as Sheriff; supported Metro re-entry in June 2025; calls it structured tool | **Opposes use:** Advises agencies against 287(g) in model policies; but guidance is nonbinding | **Opposes entanglement:** Demands ending local police entanglement without clear statutory authority |
+| **Community Trust vs. Federal Enforcement** | Distinguishes jail bookings from street patrols; argues jail 287(g) does not hurt trust | Highlights community trust: warns fear of ICE deters crime victims/witnesses from reporting | Prioritizes community trust: warns local police deputization silences crime victims and witnesses |
+| **Dillon's Rule & Litigation (*Morais-Hechavarria*)** | Defends sheriff authority to partner with ICE; opposes legislative bans | Emphasizes 4th Amendment liability; has not issued binding AG opinion voiding 287(g) | Supports strict statutory oversight; questions unilateral sheriff authority absent legislative act |
+| **ICE Detainers (Non-Judicial)** | Comply via jail notifications; NDOC releases 100% of foreign-born to ICE | Model policies advise refusing detainers absent judicial warrant signed by judge | Requires judicial warrants and strict due process before local detention holds |
+| **National Guard Deployment** | Authorized ~35 personnel for ICE administrative support | Opposed through multistate coalition; challenges federal fund withholding | Opposes deploying Nevada Guard personnel for federal immigration operations |
+| **School Grounds Enforcement** | Vetoed AB 217 (preventing ICE school access without warrants) | Model policies advise parental notice & strict FERPA privacy | Longtime school trustee; fiercely protects school grounds as safe learning environments |
+| **Workforce & DACA Protections** | Ended DACA state assistance (2023); aligns with federal enforcement priorities | Championed DACA in Supreme Court; sued to protect immigrant healthcare & rights | Protects immigrant workforce stability; opposes labor disruption in hospitality & construction |
 
 ---
 

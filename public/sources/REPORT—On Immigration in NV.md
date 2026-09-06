@@ -33,7 +33,25 @@ The **Las Vegas Metro agreement** represents the most significant policy shift. 
 
 Under Metro's current policy, officers notify ICE when foreign-born individuals are booked for violent felonies, domestic violence, DUI, burglary, theft, larceny, or assault on law enforcement officers. The 2025 Laken Riley Act expanded notification requirements to include theft-related offenses. However, Metro maintains that officers "will not enforce immigration violations" in the community and will not participate in "mass deportation roundups."
 
-The ACLU of Nevada filed suit in October 2025 (*Morais-Hechavarria v. LVMPD*) challenging Metro's agreement as unauthorized under Nevada's Dillon's Rule doctrine, which holds that local governments possess only those powers explicitly granted by the Legislature. The case could determine whether any Nevada jurisdiction can lawfully participate in 287(g) without legislative authorization.
+The ACLU of Nevada filed suit in October 2025 (*Morais-Hechavarria v. LVMPD*) challenging Metro's 287(g) agreement as unauthorized under Nevada's Dillon's Rule doctrine, which holds that local governments possess only those powers explicitly granted by the Legislature. The case could determine whether any Nevada jurisdiction can lawfully participate in 287(g) without legislative authorization.
+
+### The Community Trust Debate: Jail Deputization vs. Street Policing
+
+The central public policy debate over 287(g) agreements centers on **community trust**: whether allowing local police to participate in federal immigration enforcement compromises public safety by alienating immigrant communities from local law enforcement.
+
+1. **The Community Trust Hazard:**
+   Civil rights organizations, public health researchers, and the Nevada Attorney General's Office argue that when local police are perceived as an arm or extension of federal deportation authorities, immigrant residents—and mixed-status families—refuse to interact with local government. Crucially:
+   - **Victims of domestic violence and violent crimes** decline to call 911 out of fear that police arrival will trigger immigration screening or detention.
+   - **Witnesses to major crimes** refuse to come forward or testify in court, weakening case clearance rates and leaving dangerous offenders on the street.
+   - As the Nevada Attorney General's *Model Immigration Policies* (February 2025) warn: *"If people in Nevada are afraid to interact with police based on fear of immigration enforcement, then our criminal justice system loses access to witnesses and victims will be deterred from reporting crimes."*
+
+2. **Warrant Service Officer (Jail) vs. Task Force (Street) Models:**
+   Federal ICE policy distinguishes between two primary 287(g) models:
+   - **Warrant Service Officer (WSO) Model:** Deputizes designated corrections officers working inside local detention facilities to serve administrative warrants and hold inmates for ICE transfer at the time of scheduled release. Proponents argue this model preserves street-level community trust because patrol officers do not question residents about citizenship on neighborhood beats.
+   - **Task Force Model:** Deputizes patrol and field officers to investigate, interrogate, and arrest individuals for civil immigration violations during routine traffic stops or community policing. While Mineral County applied for a Task Force model in 2025, major urban agencies like LVMPD have strongly resisted street-level deputization, acknowledging it would obliterate community policing relationships.
+
+3. **The Street-to-Jail Funnel:**
+   Critics counter that even "jail-only" WSO agreements functionally turn local police into an extension of ICE. Because local patrol officers make initial arrests for routine offenses (traffic infractions, minor misdemeanors, or code violations), individuals are brought to county detention centers where 287(g) officers immediately process them for deportation. In Las Vegas, this dynamic contributed to a 30-fold surge in ICE detainer requests—from 32 in early 2024 to 957 through August 2025.
 
 ---
 
