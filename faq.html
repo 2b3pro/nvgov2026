@@ -89,6 +89,8 @@
         "@id": "https://nvgov2026.org/faq.html#faq",
         "mainEntity": [
           {"@type": "Question", "name": "When is the 2026 Nevada governor election?", "acceptedAnswer": {"@type": "Answer", "text": "Election Day is Tuesday, November 3, 2026. Early voting runs Saturday, October 17 through Friday, October 30. Unofficial results post at Results.NV.gov after polls close, and counties must complete their canvass by November 13."}},
+          {"@type": "Question", "name": "How do I check that my registration is still active?", "acceptedAnswer": {"@type": "Answer", "text": "Look yourself up at VOTE.NV.gov well before October. Counties mark voters inactive when an address-confirmation notice goes unanswered; inactive voters can still vote but do not receive a mail ballot, and after missing two federal general elections a registration can be canceled. As of August 2026 Nevada had 426,577 inactive voters, nearly half of them nonpartisan. A canceled voter can re-register, including in person on Election Day with a Nevada ID."}},
+          {"@type": "Question", "name": "What if my signature does not match?", "acceptedAnswer": {"@type": "Answer", "text": "Nevada verifies mail ballots by comparing the signature on the return envelope to the one on file. Sign the envelope the way you signed your registration or driver's license. If the county cannot match it, it contacts you and gives you a short window after Election Day to confirm the ballot is yours; in the June primary that window closed six days after the election. Track your ballot at MyBallot.NV.gov so you see a problem early."}},
           {"@type": "Question", "name": "How do I register to vote in Nevada?", "acceptedAnswer": {"@type": "Answer", "text": "Register or update your registration at VOTE.NV.gov. Paper registrations must be postmarked by October 6, 2026. Online registration stays open through Election Day, and you can register in person at any polling place during early voting or on Election Day with a valid Nevada driver's license or Nevada ID card."}},
           {"@type": "Question", "name": "Will I get a mail ballot automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Under Nevada law every active registered voter receives a mail ballot unless they opted out. You must be registered at least 14 days before the election to receive one; after that, vote in person."}},
           {"@type": "Question", "name": "What is the deadline to return a mail ballot?", "acceptedAnswer": {"@type": "Answer", "text": "Mailed ballots must be postmarked by November 3 and received by 5 p.m. on the fourth day after Election Day. Ballots dropped at an official drop box, vote center, or clerk's office must arrive by 7 p.m. on Election Day. The Secretary of State recommends mailing at least a week early."}},
@@ -149,6 +151,31 @@
 
   <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
+    <!-- Registration check callout -->
+    <section class="mb-8">
+      <div class="rounded-xl border-2 border-nevada-gold bg-white p-6">
+        <div class="flex items-start gap-4">
+          <span class="text-3xl">✅</span>
+          <div>
+            <h2 class="text-lg font-bold text-gray-900">Before anything else: check that you are still registered</h2>
+            <p class="text-gray-700 mt-2">
+              Look yourself up at <a href="https://vote.nv.gov" target="_blank" class="text-nevada-navy font-semibold hover:underline">VOTE.NV.gov</a>
+              now, not in November. Counties mark a voter <strong>inactive</strong> when an address-confirmation notice comes back
+              unanswered or undeliverable. Inactive voters can still vote, but they do not receive a mail ballot, and a
+              registration can be <strong>canceled</strong> after two missed federal general elections.<span class="cite"><a href="/sources.html#V6" class="cite-ref">[1]</a><span class="cite-tooltip">Nevada Secretary of State, Maintaining Nevada's List of Registered Voters</span></span>
+              As of August 2026 the state counted 426,577 inactive voters, nearly half of them nonpartisan.<span class="cite"><a href="/sources.html#V7" class="cite-ref">[2]</a><span class="cite-tooltip">Nevada Secretary of State, voter registration report, September 3, 2026</span></span>
+            </p>
+            <ul class="mt-3 space-y-1 text-sm text-gray-700">
+              <li>• <strong>Status says inactive:</strong> update your address on VOTE.NV.gov to be restored to active. If it is too late for a mail ballot, vote in person.<span class="cite"><a href="/sources.html#V6" class="cite-ref">[3]</a><span class="cite-tooltip">Nevada Secretary of State, Maintaining Nevada's List of Registered Voters</span></span></li>
+              <li>• <strong>Status says canceled or not found:</strong> submit a new registration. You can still do this in person at any polling place through Election Day with a Nevada driver's license or ID.<span class="cite"><a href="/sources.html#V6" class="cite-ref">[4]</a><span class="cite-tooltip">Nevada Secretary of State, Maintaining Nevada's List of Registered Voters</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[5]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></li>
+              <li>• <strong>Moved, changed your name, or your signature has changed:</strong> update the registration so the address and signature on file match what you will put on the envelope.<span class="cite"><a href="/sources.html#V7" class="cite-ref">[6]</a><span class="cite-tooltip">Nevada Secretary of State, voter registration report, September 3, 2026</span></span></li>
+              <li>• <strong>First-time voters:</strong> if your registration data did not match DMV or Social Security records and you did not answer the county's letter, you may have to include a copy of your ID with your mail ballot.<span class="cite"><a href="/sources.html#V8" class="cite-ref">[7]</a><span class="cite-tooltip">Nevada Secretary of State, Mail Ballot Voting</span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Key dates -->
     <section class="mb-12">
       <div class="bg-white rounded-xl shadow-sm p-6">
@@ -156,12 +183,12 @@
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <tbody>
-              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500 w-40">Oct 6</td><td class="py-2 text-gray-700">Last day for paper registration (postmarked). Online and same-day in-person registration continue through Election Day.<span class="cite"><a href="/sources.html#V5" class="cite-ref">[1]</a><span class="cite-tooltip">Ballotpedia, Voting in 2026, Nevada deadlines</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[2]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
-              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Oct 17 to Oct 30</td><td class="py-2 text-gray-700">Early voting in person.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[3]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span></td></tr>
-              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Oct 20</td><td class="py-2 text-gray-700">Registration cutoff to receive a mail ballot (14 days before the election). Register later and you vote in person.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[4]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs (NRS 293.269911)</span></span></td></tr>
-              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Nov 3, 7 p.m.</td><td class="py-2 text-gray-700">Polls close. Drop-box and in-person ballot returns must be in by this time. Mailed ballots must be postmarked by today.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[5]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
-              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Nov 7, 5 p.m.</td><td class="py-2 text-gray-700">Last day a mailed ballot postmarked by Election Day can arrive and still count (fourth day after).<span class="cite"><a href="/sources.html#V2" class="cite-ref">[6]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
-              <tr><td class="py-2 font-mono text-gray-500">Nov 13 / Nov 24</td><td class="py-2 text-gray-700">County canvass deadline; Nevada Supreme Court canvass of statewide results. Results are unofficial until then.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[7]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[8]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500 w-40">Oct 6</td><td class="py-2 text-gray-700">Last day for paper registration (postmarked). Online and same-day in-person registration continue through Election Day.<span class="cite"><a href="/sources.html#V5" class="cite-ref">[8]</a><span class="cite-tooltip">Ballotpedia, Voting in 2026, Nevada deadlines</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[9]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Oct 17 to Oct 30</td><td class="py-2 text-gray-700">Early voting in person.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[10]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Oct 20</td><td class="py-2 text-gray-700">Registration cutoff to receive a mail ballot (14 days before the election). Register later and you vote in person.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[11]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs (NRS 293.269911)</span></span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Nov 3, 7 p.m.</td><td class="py-2 text-gray-700">Polls close. Drop-box and in-person ballot returns must be in by this time. Mailed ballots must be postmarked by today.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[12]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 font-mono text-gray-500">Nov 7, 5 p.m.</td><td class="py-2 text-gray-700">Last day a mailed ballot postmarked by Election Day can arrive and still count (fourth day after).<span class="cite"><a href="/sources.html#V2" class="cite-ref">[13]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
+              <tr><td class="py-2 font-mono text-gray-500">Nov 13 / Nov 24</td><td class="py-2 text-gray-700">County canvass deadline; Nevada Supreme Court canvass of statewide results. Results are unofficial until then.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[14]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[15]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span></td></tr>
             </tbody>
           </table>
         </div>
@@ -178,7 +205,7 @@
           <p class="text-gray-700 mt-3">
             Election Day is Tuesday, November 3, 2026, with early voting October 17 through 30. Unofficial results post at
             Results.NV.gov after polls close. Counties must finish their canvass by November 13 and the Supreme Court
-            canvasses statewide results November 24; nothing is official before then.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[9]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[10]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+            canvasses statewide results November 24; nothing is official before then.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[16]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[17]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
             Because mailed ballots can arrive for four days after the election, close races in Nevada often take days to
             call.
           </p>
@@ -189,9 +216,9 @@
           <p class="text-gray-700 mt-3">
             Use <a href="https://vote.nv.gov" target="_blank" class="text-nevada-navy font-medium hover:underline">VOTE.NV.gov</a>
             to register, update, or check your status. You must be a U.S. citizen, 18 by Election Day, a resident of your
-            county for 30 days and your precinct for 10, and not currently imprisoned for a felony.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[11]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+            county for 30 days and your precinct for 10, and not currently imprisoned for a felony.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[18]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
             Paper registrations must be postmarked by October 6. Online registration stays open through Election Day, and
-            same-day registration is available in person during early voting and on Election Day.<span class="cite"><a href="/sources.html#V5" class="cite-ref">[12]</a><span class="cite-tooltip">Ballotpedia, Voting in 2026, Nevada deadlines</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[13]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+            same-day registration is available in person during early voting and on Election Day.<span class="cite"><a href="/sources.html#V5" class="cite-ref">[19]</a><span class="cite-tooltip">Ballotpedia, Voting in 2026, Nevada deadlines</span></span><span class="cite"><a href="/sources.html#V2" class="cite-ref">[20]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
           </p>
         </article>
 
@@ -199,24 +226,38 @@
           <h3 class="text-lg font-bold text-gray-900">Will I get a mail ballot, and how do I return it?</h3>
           <p class="text-gray-700 mt-3">
             Yes, unless you opted out. Since 2021 every active registered voter receives a mail ballot; you must be
-            registered at least 14 days before the election to get one.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[14]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs (AB 321, NRS 293.269911)</span></span>
+            registered at least 14 days before the election to get one.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[21]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs (AB 321, NRS 293.269911)</span></span>
             The return envelope is postage-paid; sign it on the signature line. Mailed ballots must be postmarked by
             November 3 and received by 5 p.m. on the fourth day after. Ballots taken to an official drop box, vote center, or
             the clerk's office must arrive by 7 p.m. on Election Day. The Secretary of State recommends mailing at least a
-            week early and tracking your ballot at MyBallot.NV.gov.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[15]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span><span class="cite"><a href="/sources.html#V1" class="cite-ref">[16]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span>
-            Do not hand your ballot to a canvasser or organization; the state advises returning it yourself.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[17]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+            week early and tracking your ballot at MyBallot.NV.gov.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[22]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span><span class="cite"><a href="/sources.html#V1" class="cite-ref">[23]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span>
+            Do not hand your ballot to a canvasser or organization; the state advises returning it yourself.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[24]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+          </p>
+        </article>
+
+        <article class="bg-white rounded-xl shadow-sm p-6" id="q-signature">
+          <h3 class="text-lg font-bold text-gray-900">What if my signature does not match?</h3>
+          <p class="text-gray-700 mt-3">
+            Nevada does not check ID for mail ballots; it compares the signature on your return envelope to the one on
+            file from your registration or DMV record.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[25]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker (current law relies on signature matching)</span></span>
+            Sign the envelope the way you normally sign, on the signature line, and do not let anyone sign for you.
+            If the county cannot match the signature, the ballot is challenged and the county contacts you so you can
+            confirm it is yours. That cure window is short: in the June primary it closed at 5 p.m. six days after Election
+            Day, so expect a similar deadline around November 9 and confirm with your clerk.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[26]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs (primary cure deadline)</span></span>
+            Track your ballot at MyBallot.NV.gov so you learn about a problem while there is still time to fix it.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[27]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span>
+            If your signature has changed since you registered, update your registration before you vote.
           </p>
         </article>
 
         <article class="bg-white rounded-xl shadow-sm p-6" id="q-id">
           <h3 class="text-lg font-bold text-gray-900">Do I need ID to vote?</h3>
           <p class="text-gray-700 mt-3">
-            Not to cast a ballot. Nevada verifies voters by matching signatures.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[18]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker, July 31, 2026</span></span>
+            Not to cast a ballot. Nevada verifies voters by matching signatures.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[28]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker, July 31, 2026</span></span>
             You do need a valid Nevada driver's license or Nevada ID card (or a tribal ID meeting state requirements) to
             register or update your registration on the same day you vote. A passport or military ID does not work for
             same-day registration, and if the address on your Nevada ID is out of date you also need proof of residence
-            such as a utility bill or lease.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[19]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
-            Question 7 on this ballot would add a photo ID requirement to the state constitution if it passes a second time.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[20]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker</span></span>
+            such as a utility bill or lease.<span class="cite"><a href="/sources.html#V2" class="cite-ref">[29]</a><span class="cite-tooltip">Nevada Secretary of State, Election FAQs</span></span>
+            Question 7 on this ballot would add a photo ID requirement to the state constitution if it passes a second time.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[30]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker</span></span>
           </p>
         </article>
 
@@ -226,7 +267,7 @@
             Nevada has put that line on every statewide race since 1975. Votes for it are counted and published alongside
             the candidates' totals, but only votes for named candidates decide the winner. Choosing it is a recorded
             protest, not a way to force a new election, and you may mark it only if you have not voted for a candidate in
-            that race.<span class="cite"><a href="/sources.html#V3" class="cite-ref">[21]</a><span class="cite-tooltip">NRS 293.269</span></span>
+            that race.<span class="cite"><a href="/sources.html#V3" class="cite-ref">[31]</a><span class="cite-tooltip">NRS 293.269</span></span>
           </p>
         </article>
 
@@ -237,9 +278,9 @@
             consecutive general elections. <strong>Question 6</strong> would write the state's existing abortion law,
             which permits the procedure through 24 weeks, into the constitution; it passed in 2024 with 64.4 percent.
             <strong>Question 7</strong> would require government-issued photo ID to vote in person and the last four digits
-            of a driver's license or Social Security number for mail ballots; it passed in 2024 with 73.2 percent.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[22]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker, July 31, 2026</span></span>
-            Proposed measures on open primaries and independent redistricting did not qualify.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[23]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker</span></span>
-            The Secretary of State publishes an official ballot question guide.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[24]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span>
+            of a driver's license or Social Security number for mail ballots; it passed in 2024 with 73.2 percent.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[32]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker, July 31, 2026</span></span>
+            Proposed measures on open primaries and independent redistricting did not qualify.<span class="cite"><a href="/sources.html#V4" class="cite-ref">[33]</a><span class="cite-tooltip">The Nevada Independent, 2026 ballot measure tracker</span></span>
+            The Secretary of State publishes an official ballot question guide.<span class="cite"><a href="/sources.html#V1" class="cite-ref">[34]</a><span class="cite-tooltip">Nevada Secretary of State, 2026 Election Information</span></span>
             See our <a href="/compare/issues/abortion.html" class="text-nevada-navy hover:underline">reproductive rights</a> page for the candidates' positions.
           </p>
         </article>
@@ -253,11 +294,11 @@
 
         <article class="bg-white rounded-xl shadow-sm p-6" id="q-who">
           <h3 class="text-lg font-bold text-gray-900">Who is on the ballot for governor?</h3>
-          <p class="text-gray-700 mt-3">Three names, in this order, followed by "None of these candidates":<span class="cite"><a href="/sources.html#DF32" class="cite-ref">[25]</a><span class="cite-tooltip">Washoe County Registrar of Voters, 2026 General Election contest list</span></span></p>
+          <p class="text-gray-700 mt-3">Three names, in this order, followed by "None of these candidates":<span class="cite"><a href="/sources.html#DF32" class="cite-ref">[35]</a><span class="cite-tooltip">Washoe County Registrar of Voters, 2026 General Election contest list</span></span></p>
           <ul class="mt-3 space-y-2 text-gray-700">
-            <li>• <a href="/candidates/ford.html" class="text-ford font-semibold hover:underline">Ford, Aaron D.</a> (Democratic): attorney general, former Senate majority leader. Won the June primary with 63 percent.<span class="cite"><a href="/sources.html#E1" class="cite-ref">[26]</a><span class="cite-tooltip">The Nevada Independent, 2026 Primary Election Results</span></span></li>
-            <li>• <a href="/candidates/danielle-ford.html" class="font-semibold hover:underline" style="color: var(--color-dford);">Ford, Danielle</a> (No Political Party): State Board of Education member, former CCSD trustee.<span class="cite"><a href="/sources.html#DF1" class="cite-ref">[27]</a><span class="cite-tooltip">Ballotpedia, Danielle Ford</span></span></li>
-            <li>• <a href="/candidates/lombardo.html" class="text-lombardo font-semibold hover:underline">Lombardo, Joseph</a> (Republican): incumbent governor, former Clark County sheriff. Won the June primary with 91 percent.<span class="cite"><a href="/sources.html#E1" class="cite-ref">[28]</a><span class="cite-tooltip">The Nevada Independent, 2026 Primary Election Results</span></span></li>
+            <li>• <a href="/candidates/ford.html" class="text-ford font-semibold hover:underline">Ford, Aaron D.</a> (Democratic): attorney general, former Senate majority leader. Won the June primary with 63 percent.<span class="cite"><a href="/sources.html#E1" class="cite-ref">[36]</a><span class="cite-tooltip">The Nevada Independent, 2026 Primary Election Results</span></span></li>
+            <li>• <a href="/candidates/danielle-ford.html" class="font-semibold hover:underline" style="color: var(--color-dford);">Ford, Danielle</a> (No Political Party): State Board of Education member, former CCSD trustee.<span class="cite"><a href="/sources.html#DF1" class="cite-ref">[37]</a><span class="cite-tooltip">Ballotpedia, Danielle Ford</span></span></li>
+            <li>• <a href="/candidates/lombardo.html" class="text-lombardo font-semibold hover:underline">Lombardo, Joseph</a> (Republican): incumbent governor, former Clark County sheriff. Won the June primary with 91 percent.<span class="cite"><a href="/sources.html#E1" class="cite-ref">[38]</a><span class="cite-tooltip">The Nevada Independent, 2026 Primary Election Results</span></span></li>
           </ul>
         </article>
 
@@ -265,7 +306,7 @@
           <h3 class="text-lg font-bold text-gray-900">Are Aaron Ford and Danielle Ford related?</h3>
           <p class="text-gray-700 mt-3">
             No. They share a surname and appear back to back on the ballot, which reporters and a Nevada Appeal columnist
-            flagged as a possible source of confusion when she filed.<span class="cite"><a href="/sources.html#DF5" class="cite-ref">[29]</a><span class="cite-tooltip">Nevada Current, March 16, 2026</span></span><span class="cite"><a href="/sources.html#DF6" class="cite-ref">[30]</a><span class="cite-tooltip">Nevada Appeal, March 21, 2026</span></span>
+            flagged as a possible source of confusion when she filed.<span class="cite"><a href="/sources.html#DF5" class="cite-ref">[39]</a><span class="cite-tooltip">Nevada Current, March 16, 2026</span></span><span class="cite"><a href="/sources.html#DF6" class="cite-ref">[40]</a><span class="cite-tooltip">Nevada Appeal, March 21, 2026</span></span>
             Check the party column: DEM is Aaron Ford, NPP is Danielle Ford. On this site, "Ford" without a first name means
             Aaron Ford.
           </p>
@@ -276,8 +317,8 @@
           <p class="text-gray-700 mt-3">
             Nevada's primaries choose party nominees, and only registered Democrats and Republicans vote in them. She filed
             with no party, which skips the primary; nonpartisan candidates reach the general ballot by collecting 250
-            valid signatures.<span class="cite"><a href="/sources.html#DF3" class="cite-ref">[31]</a><span class="cite-tooltip">The Nevada Independent, March 12, 2026</span></span><span class="cite"><a href="/sources.html#DF4" class="cite-ref">[32]</a><span class="cite-tooltip">KTNV, March 12, 2026</span></span>
-            Six other no-party candidates filed and later withdrew or were disqualified.<span class="cite"><a href="/sources.html#DF1" class="cite-ref">[33]</a><span class="cite-tooltip">Ballotpedia, Danielle Ford</span></span>
+            valid signatures.<span class="cite"><a href="/sources.html#DF3" class="cite-ref">[41]</a><span class="cite-tooltip">The Nevada Independent, March 12, 2026</span></span><span class="cite"><a href="/sources.html#DF4" class="cite-ref">[42]</a><span class="cite-tooltip">KTNV, March 12, 2026</span></span>
+            Six other no-party candidates filed and later withdrew or were disqualified.<span class="cite"><a href="/sources.html#DF1" class="cite-ref">[43]</a><span class="cite-tooltip">Ballotpedia, Danielle Ford</span></span>
           </p>
         </article>
 
@@ -286,8 +327,8 @@
           <p class="text-gray-700 mt-3">
             Public polling has been limited and partisan-commissioned. A July 2026 survey for the Democratic Governors
             Association had Lombardo and Aaron Ford tied at 44 percent with 12 percent undecided; Republican-commissioned
-            polls that summer showed Lombardo ahead by 7 to 12 points.<span class="cite"><a href="/sources.html#G6" class="cite-ref">[34]</a><span class="cite-tooltip">The Nevada Independent, July 22, 2026</span></span><span class="cite"><a href="/sources.html#G7" class="cite-ref">[35]</a><span class="cite-tooltip">The Nevada Independent, August 2026 GOP polls</span></span>
-            No public poll has tested Danielle Ford by name, so her effect on the race is unmeasured.<span class="cite"><a href="/sources.html#DF22" class="cite-ref">[36]</a><span class="cite-tooltip">The Nevada Independent, July 22, 2026 (two-way result)</span></span>
+            polls that summer showed Lombardo ahead by 7 to 12 points.<span class="cite"><a href="/sources.html#G6" class="cite-ref">[44]</a><span class="cite-tooltip">The Nevada Independent, July 22, 2026</span></span><span class="cite"><a href="/sources.html#G7" class="cite-ref">[45]</a><span class="cite-tooltip">The Nevada Independent, August 2026 GOP polls</span></span>
+            No public poll has tested Danielle Ford by name, so her effect on the race is unmeasured.<span class="cite"><a href="/sources.html#DF22" class="cite-ref">[46]</a><span class="cite-tooltip">The Nevada Independent, July 22, 2026 (two-way result)</span></span>
             Read any poll's sponsor before its topline.
           </p>
         </article>
@@ -296,8 +337,8 @@
           <h3 class="text-lg font-bold text-gray-900">Who has the money?</h3>
           <p class="text-gray-700 mt-3">
             Lombardo, by a wide margin. Mid-July reports showed roughly $15 million across his campaign and allied PACs
-            against about $2.6 million for Aaron Ford, whose campaign emphasized nearly 13,000 small donors.<span class="cite"><a href="/sources.html#DF24" class="cite-ref">[37]</a><span class="cite-tooltip">Las Vegas Sun, August 16, 2026</span></span>
-            We located no reporting of Danielle Ford's totals.<span class="cite"><a href="/sources.html#DF24" class="cite-ref">[38]</a><span class="cite-tooltip">Las Vegas Sun, August 16, 2026 (money race coverage)</span></span>
+            against about $2.6 million for Aaron Ford, whose campaign emphasized nearly 13,000 small donors.<span class="cite"><a href="/sources.html#DF24" class="cite-ref">[47]</a><span class="cite-tooltip">Las Vegas Sun, August 16, 2026</span></span>
+            We located no reporting of Danielle Ford's totals.<span class="cite"><a href="/sources.html#DF24" class="cite-ref">[48]</a><span class="cite-tooltip">Las Vegas Sun, August 16, 2026 (money race coverage)</span></span>
             Details are on each <a href="/candidates/lombardo.html#money" class="text-nevada-navy hover:underline">candidate profile</a> and in the <a href="/compare/" class="text-nevada-navy hover:underline">comparison hub</a>.
           </p>
         </article>
@@ -305,9 +346,9 @@
         <article class="bg-white rounded-xl shadow-sm p-6" id="q-debates">
           <h3 class="text-lg font-bold text-gray-900">Will there be debates?</h3>
           <p class="text-gray-700 mt-3">
-            Aaron Ford challenged Lombardo in June to three post-Labor Day debates, including one in Spanish.<span class="cite"><a href="/sources.html#G5" class="cite-ref">[39]</a><span class="cite-tooltip">KSNV News 3, June 17, 2026</span></span>
+            Aaron Ford challenged Lombardo in June to three post-Labor Day debates, including one in Spanish.<span class="cite"><a href="/sources.html#G5" class="cite-ref">[49]</a><span class="cite-tooltip">KSNV News 3, June 17, 2026</span></span>
             Danielle Ford has said a Las Vegas station's criteria would exclude her; we have not seen the criteria
-            ourselves.<span class="cite"><a href="/sources.html#DF23" class="cite-ref">[40]</a><span class="cite-tooltip">Danielle Ford campaign video, July 29, 2026 (candidate's own account)</span></span>
+            ourselves.<span class="cite"><a href="/sources.html#DF23" class="cite-ref">[50]</a><span class="cite-tooltip">Danielle Ford campaign video, July 29, 2026 (candidate's own account)</span></span>
             We will log confirmed dates on the <a href="/updates.html" class="text-nevada-navy hover:underline">updates page</a>.
           </p>
         </article>
