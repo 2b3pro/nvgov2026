@@ -455,6 +455,20 @@ h4 {
   color: var(--color-nevada-gold);
 }
 
+/* Contrasting citation links inside navy containers */
+div.bg-nevada-navy a.cite-ref,
+.bg-nevada-navy a.cite-ref,
+.bg-nevada-navy .cite-ref {
+  color: var(--color-nevada-gold);
+}
+
+div.bg-nevada-navy a.cite-ref:hover,
+.bg-nevada-navy a.cite-ref:hover,
+.bg-nevada-navy .cite-ref:hover {
+  color: #ffffff;
+}
+
+
 /* Tooltip for citations */
 .cite-tooltip {
   visibility: hidden;
