@@ -1,6 +1,6 @@
 # RESEARCH PROFILE: DANIELLE FORD (NV-GOV 2026, NO POLITICAL PARTY)
 
-**Version 1.0 · Compiled September 5, 2026 · nvgov2026.org**
+**Version 1.1 · Updated September 15, 2026 (Originally Compiled September 5, 2026) · nvgov2026.org**
 
 This profile follows the same evidence standard as the site's other candidate dossiers: every factual claim is tied to a numbered source that was retrieved and read during compilation. Where we could not obtain a document, we say so rather than fill the gap. Interpretive judgments are labeled as such.
 
@@ -112,9 +112,26 @@ Her campaign site frames six priorities.[2]
 
 In her Ballotpedia survey she named AI and technology policy as possibly "the most consequential public issue of our lifetime," listing student data, surveillance, automated decision-making, algorithmic bias, data centers, water, and energy as needing guardrails.[1]
 
-### 6.3 What the platform does not contain
+### 6.3 Platform Evolution: September 2026 Media Issue Brief
 
-The platform contains no stated position on abortion, firearms, taxes or revenue structure, NV Energy rate regulation, the Colorado River, or the state budget. It names no bills, dollar figures, or timelines. This is a typed absence: we read every platform page and found none, not that she has never spoken to these topics elsewhere.[2]
+When Ford launched her campaign website, the platform was organized into six broad priority areas but omitted explicit stances on abortion, firearms, taxes, NV Energy rates, the Colorado River, and voter ID.[2] On September 15, 2026, her campaign released a comprehensive "2026 Media Issue Brief" (Source 33) directly articulating positions across these areas, closing several major platform gaps while retaining her nonpartisan "systems repair" orientation.[33]
+
+- **Abortion & Reproductive Rights:** Supports reproductive freedom and patient-physician decision making without political interference. Explicitly endorses Nevada's voter-approved statutory framework (NRS 442.250, ratified by voters in 1990) protecting abortion access through 24 weeks and later when medically necessary to preserve life or health. Supports protections for contraception, miscarriage care, IVF/fertility care, and emergency treatment.[33]
+  - *Statutory Qualification:* Because NRS 442.250 was enacted by voter referendum, Article 19, Section 1 of the Nevada Constitution prohibits the Governor or Legislature from repealing or amending it without another direct statewide vote.
+- **Voter ID & Proof of Citizenship:** Supports the principle that only eligible U.S. citizens should vote, alongside secure elections, accurate rolls, and identity verification. Opposes creating a "paperwork trap" that blocks lawful voters due to name changes, missing records, transportation, costs, or tribal access issues. Any ID rule must be constitutional, state-funded, accessible, and phased in.[33]
+  - *Context Qualification:* Charts a middle position between Governor Lombardo's push for mandatory photo ID (Question 7) and progressive opposition, setting strict accessibility and non-disenfranchisement prerequisites.
+- **Gun Safety & 2nd Amendment:** Supports lawful, responsible gun ownership while asserting gun rights entail public responsibility. Pledges to enforce universal background checks, expand crisis intervention and high-risk protection orders (ERPOs), support safe firearm storage and training, and keep weapons that are heavily restricted under state and federal law out of dangerous hands. Position: *"Safety and constitutional rights should not be treated as opposites."*[33]
+  - *Policy Contrast:* Avoids endorsing new statutory gun bans or age limits (which Lombardo vetoed), focusing instead on rigorous enforcement of existing background checks and crisis diversion.
+- **Taxes, Revenue & State Lottery:** "No new taxes as a first resort." Insists that before asking Nevadans to pay more, the state must aggressively audit public contracts, eliminate procurement loopholes, end no-bid arrangements, scrutinize tax abatements, and curb administrative waste. Open to studying a voter-approved state lottery if revenue transparency is guaranteed.[33]
+  - *Constitutional Qualification:* Article 4, Section 24 of the Nevada Constitution currently bans lotteries. Any state lottery requires amending the constitution (passing two consecutive legislative sessions plus a statewide voter referendum).
+- **NV Energy & Utility Oversight:** Argues Nevadans deserve clearer billing explanations, stronger ratepayer protections, and greater scrutiny of long-term energy decisions. Acknowledges that the Governor does not directly set electric rates (adjudicated by the Public Utilities Commission of Nevada), but pledges to use executive appointments and consumer advocacy to challenge capital infrastructure costs shifted onto families.[33]
+- **Water & Colorado River:** Recognizes water decisions cannot be separated from growth, housing, data centers, and regional compacts. Acknowledges Nevada cannot resolve Colorado River shortages alone (300,000 acre-foot annual allocation), but demands disciplined state growth that conditions economic development incentives on verified water availability and realistic long-term costs.[33]
+- **Read by Grade 3 & Literacy:** Opposes mandatory 3rd-grade retention as a primary remedy when adult systems fail to intervene early. Supports earlier screening, reading specialists, tutoring, and family book access. Correctly notes that AB 289 (2019) eliminated the mandatory retention requirement from Nevada's Read by Grade 3 law.[33]
+- **Special Education & Support Staff:** "Nevada should fund the students we have, not the system we wish we had." Calls for school funding to reflect the real costs of special education and English learners, alongside safe staffing and stronger pay/retention for school support staff (paraprofessionals, bus drivers, custodians, cafeteria workers).[33]
+- **AI, Surveillance & Pricing Algorithms:** Brings direct background using and teaching AI; demands regulatory guardrails before harm becomes normalized. Highlights student data safeguards under FERPA, bias testing, retention limits on automated license plate readers (ALPRs), and scrutiny of algorithmic rent pricing.[33]
+
+**Persistent Platform Characteristics:** While the Media Issue Brief provides concrete stances on topics previously omitted from her platform, her policy formulations continue to emphasize governing philosophies, oversight criteria, and regulatory questions rather than drafted legislation, statutory language, or line-item state budget calculations.
+
 
 ### 6.4 Campaign finance
 
@@ -151,7 +168,7 @@ Following the site's protocol, only tensions a thoughtful supporter would recogn
 
 **Strengths.** Two statewide-relevant electoral wins, including unseating an incumbent in 2024; a consistent, documented posture of contract scrutiny and anti-privatization in education; a platform that is unusually candid about tradeoffs and that engages AI, data centers, caregiving, and procurement in ways the major-party platforms mostly do not; a genuine outsider position in a state where nonpartisans are the largest registration bloc.[1][2][22]
 
-**Weaknesses.** No executive, legislative, or budget experience outside school governance; a platform of principles with almost no mechanisms or costs; a record of conduct controversies that opponents would use; no located funding, endorsements, or polling presence; and a ballot position that invites confusion with the Democratic nominee.[2][15][16][22][24]
+**Weaknesses.** No executive, legislative, or budget experience outside school governance; policy proposals remain largely principles and regulatory criteria rather than drafted bills, tax formulas, or itemized state budgets (though her September 2026 media brief clarified previously omitted issue positions); a record of conduct controversies that opponents would use; no located funding, endorsements, or polling presence; and a ballot position that invites confusion with the Democratic nominee.[2][15][16][22][24][33]
 
 **Electoral role.** With no public poll testing her, the honest statement is that her effect on the race is unmeasured. The 2026 polls show a contest within the margin of error, so even a small share drawn from either nominee could matter, but which nominee she draws from is unknown.[22][24]
 
@@ -162,7 +179,7 @@ Following the site's protocol, only tensions a thoughtful supporter would recogn
 1. Your platform says public money belongs to the public. What was the total cost to CCSD of the October 2021 termination vote and its reversal, and would you make the same vote again?
 2. You listed the Democratic Party on your 2024 filings. When did you leave the party, and what changed?
 3. Name three specific bills or executive actions you would pursue in the 2027 session, with a cost estimate for each.
-4. Where do you stand on abortion, firearms, and the state's tax structure? None appear on your platform.
+4. In your September 2026 media brief, you state that new taxes should not be a first resort and support studying a state lottery. Given that Article 4, Section 24 of the Nevada Constitution bans lotteries—requiring two consecutive legislative approvals and a statewide referendum—what specific contract audits or procurement savings would balance the 2027 state budget before any lottery revenue could be realized?
 5. You say data centers must show "measurable public value." What threshold would you set, and would you pause existing abatements?
 6. What is your position on the Public Utilities Commission's NV Energy demand charge and on the governor's appointment power over the PUC?
 
@@ -204,5 +221,6 @@ Numbering matches the DF anchors on nvgov2026.org/sources.html.
 30. Las Vegas Weekly, "Nevada Governor's race: Sorting through the candidates' campaign ads and appearances," August 13, 2026. https://lasvegasweekly.com/news/2026/aug/13/nevada-governors-race-sorting-through-candidates
 31. Nevada Secretary of State, 2024 Statewide Primary results, Clark County (State Board of Education District 3). https://www.nvsos.gov/SOSelectionPages/results/2024StateWidePrimary/Clark.aspx
 32. Washoe County Registrar of Voters, "2026 General Election" candidate listing (Governor: Ford, Aaron D., DEM; Ford, Danielle, NPP; Lombardo, Joseph, REP). https://www.washoecounty.gov/voters/information/index.php
+33. Danielle Ford for Governor, "2026 Media Issue Brief" (campaign briefing document detailing specific issue positions on reproductive freedom, voter ID, gun safety, taxes/lottery, NV Energy, Colorado River, Read by Grade 3, special education, and AI guardrails), September 2026. Public file: `public/sources/Danielle Ford for Governor _ 2026 Media Issue Brief - Google Docs.txt`.
 
 **Not obtained:** Danielle Ford's 2026 contributions and expenses reports (NV SOS Aurora); the KLAS-TV debate criteria letter; Nevada State Board of Education meeting minutes and roll-call votes for 2025 to 2026; two KLAS articles from 2022 and 2024 blocked by the publisher's bot check.
